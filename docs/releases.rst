@@ -1,6 +1,11 @@
 Release Notes
 =============
 
+v0.3.1
+------
+
+- Removed ``eth-utils`` requirement.
+
 v0.3.0
 ------
 
