@@ -1,7 +1,7 @@
-<PROJECT_NAME>
+eth-typing
 ==============================
 
-<SHORT_DESCRIPTION>
+Common type annotations for ethereum python packages
 
 Contents
 --------
@@ -9,7 +9,7 @@ Contents
 .. toctree::
     :maxdepth: 3
 
-    <MODULE_NAME>
+    eth_typing
     releases
 
 

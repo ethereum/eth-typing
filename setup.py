@@ -35,14 +35,14 @@ extras_require['dev'] = (
 )
 
 setup(
-    name='<PYPI_NAME>',
+    name='eth-typing',
     # *IMPORTANT*: Don't manually change the version here. Use `make bump`, as described in readme
     version='0.1.0-alpha.0',
-    description="""<PYPI_NAME>: <SHORT_DESCRIPTION>""",
+    description="""eth-typing: Common type annotations for ethereum python packages""",
     long_description_markdown_filename='README.md',
     author='The eth-typing contributors',
     author_email='eth-typing@ethereum.org',
-    url='https://github.com/ethereum/<REPO_NAME>',
+    url='https://github.com/ethereum/eth-typing',
     include_package_data=True,
     install_requires=[
         "eth-utils>=0.7.4,<1.0.0",
@@ -50,7 +50,7 @@ setup(
     setup_requires=['setuptools-markdown'],
     python_requires='>=3.5, <4',
     extras_require=extras_require,
-    py_modules=['<MODULE_NAME>'],
+    py_modules=['eth_typing'],
     license="MIT",
     zip_safe=False,
     keywords='ethereum',
