@@ -45,9 +45,6 @@ setup(
     author_email='eth-typing@ethereum.org',
     url='https://github.com/ethereum/eth-typing',
     include_package_data=True,
-    install_requires=[
-        "eth-utils>=1,<2",
-    ],
     setup_requires=['setuptools-markdown'],
     python_requires='>=3.5, <4',
     extras_require=extras_require,
