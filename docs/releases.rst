@@ -1,7 +1,12 @@
 Release Notes
 =============
 
-v0.1.0-alpha.1
---------------
+v0.3.0
+------
 
-- Launched repository, claimed names for pip, RTD, github, etc
+- Updated ``eth-utils`` requirement.
+
+v0.2.0
+------
+
+- Launched repository, claimed names for pip, RTD, github, etc.
