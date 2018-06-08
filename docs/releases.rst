@@ -1,6 +1,11 @@
 Release Notes
 =============
 
+v1.0.0
+------
+
+- Added annotations from ``py-evm``.
+
 v0.3.1
 ------
 
