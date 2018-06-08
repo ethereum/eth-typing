@@ -1,7 +1,7 @@
 eth-typing
 ==============================
 
-Common type annotations for ethereum python packages
+Common type annotations for ethereum python packages.
 
 Contents
 --------

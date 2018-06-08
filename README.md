@@ -7,7 +7,7 @@
 [![Docs build](https://readthedocs.org/projects/eth-typing/badge/?version=latest)](http://eth-typing.readthedocs.io/en/latest/?badge=latest)
    
 
-Common type annotations for ethereum python packages
+Common type annotations for ethereum python packages.
 
 Read more in the [documentation on ReadTheDocs](https://eth-typing.readthedocs.io/). [View the change log](https://eth-typing.readthedocs.io/en/latest/releases.html).
 
