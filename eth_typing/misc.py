@@ -5,7 +5,7 @@ from typing import (
 )
 
 Address = NewType('Address', bytes)  # for canonical Addresses
-BlockNumber = NewType('BlockNumber', int)
+BlockNumber = NewType('BlockNumber', int) 
 Hash32 = NewType('Hash32', bytes)
 HexAddress = NewType('HexAddress', str)  # for hex encoded addresses
 HexStr = NewType('HexStr', str)
