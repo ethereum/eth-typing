@@ -7,8 +7,10 @@ from .misc import (  # noqa: F401
     AnyAddress,
     BlockNumber,
     ChecksumAddress,
+    ContractName,
     Hash32,
     HexAddress,
     HexStr,
     Primitives,
+    URI,
 )
