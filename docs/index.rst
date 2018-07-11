@@ -9,7 +9,7 @@ Contents
 .. toctree::
     :maxdepth: 3
 
-    eth_typing
+    types
     releases
 
 
