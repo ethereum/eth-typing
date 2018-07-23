@@ -7,15 +7,22 @@ from .enums import (  # noqa: F401
     ForkName,
 )
 
-from .misc import (  # noqa: F401
+from .evm import (  # noqa: F401
     Address,
     AnyAddress,
+    BlockIdentifier,
     BlockNumber,
     ChecksumAddress,
-    ContractName,
     Hash32,
     HexAddress,
+)
+
+from .encoding import (  # noqa: F401
     HexStr,
     Primitives,
+)
+
+from .ethpm import (  # noqa: F401
+    ContractName,
     URI,
 )
