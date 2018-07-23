@@ -4,7 +4,6 @@ from typing import (
     Union,
 )
 
-
 Hash32 = NewType('Hash32', bytes)
 BlockNumber = NewType('BlockNumber', int)
 BlockIdentifier = Union[BlockNumber, Hash32]
