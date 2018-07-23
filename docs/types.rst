@@ -49,8 +49,29 @@ Class that contains the different names used to represent hard forks on the Ethe
         Constantinople = 'Constantinople'
         Metropolis = 'Metropolis'
 
-Miscellaneous
--------------
+EthPM
+-----
+
+ContractName
+~~~~~~~~~~~~
+
+Any string conforming to the regular expression ``[a-zA-Z][a-zA-Z0-9_]{0,255}``.
+
+.. code-block:: python
+
+    ContractName = NewType('ContractName', str)
+
+URI
+~~~
+
+Any string that represents a URI.
+
+.. code-block:: python
+
+    URI = NewType('URI', str)
+
+EVM
+---
 
 Address
 ~~~~~~~
@@ -61,32 +82,14 @@ Any bytestring representing a canonical address.
 
     Address = NewType('Address', bytes)
 
-AnyAddress
+HexAddress
 ~~~~~~~~~~
 
-Any of Address_, HexAddress_, ChecksumAddress_.
+Any string representing a hex encoded address.
 
 .. code-block:: python
 
-    AnyAddress = TypeVar('AnyAddress', Address, HexAddress, ChecksumAddress)
-
-BlockNumber
-~~~~~~~~~~~
-
-Any integer that represents a valid block number on a chain.
-
-.. code-block:: python
-
-    BlockNumber = NewType('BlockNumber', int)
-
-ContractName
-~~~~~~~~~~~~
-
-Any string conforming to the regular expression ``[a-zA-Z][a-zA-Z0-9_]{0,255}``.
-
-.. code-block:: python
-
-    ContractName = NewType('ContractName', str)
+    HexAddress = NewType('HexAddress', str)
 
 ChecksumAddress
 ~~~~~~~~~~~~~~~
@@ -99,6 +102,15 @@ Any HexAddress_ that is formatted according to ERC55_.
 
     ChecksumAddress = NewType('ChecksumAddress', HexAddress)
 
+AnyAddress
+~~~~~~~~~~
+
+Any of Address_, HexAddress_, ChecksumAddress_.
+
+.. code-block:: python
+
+    AnyAddress = TypeVar('AnyAddress', Address, HexAddress, ChecksumAddress)
+
 Hash32
 ~~~~~~
 
@@ -108,14 +120,26 @@ Any 32 byte hash.
 
     Hash32 = NewType('Hash32', bytes)
 
-HexAddress
-~~~~~~~~~~
+BlockNumber
+~~~~~~~~~~~
 
-Any string representing a hex encoded address.
+Any integer that represents a valid block number on a chain.
 
 .. code-block:: python
 
-    HexAddress = NewType('HexAddress', str)
+    BlockNumber = NewType('BlockNumber', int)
+
+BlockIdentifier
+~~~~~~~~~~~~~~~
+
+Either a 32 byte hash or an integer block number
+
+.. code-block:: python
+
+    BlockIdentifier = Union[Hash32, BlockNumber]
+
+Encodings
+---------
 
 HexStr
 ~~~~~~
@@ -136,12 +160,3 @@ Any of `bytes`, `int`, or `bool` used as the `Primitive` arg for conversion util
 .. code-block:: python
 
     Primitives = Union[bytes, int, bool]
-
-URI
-~~~
-
-Any string that represents a URI.
-
-.. code-block:: python
-
-    URI = NewType('URI', str)
