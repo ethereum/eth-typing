@@ -38,7 +38,7 @@ extras_require['dev'] = (
 setup(
     name='eth-typing',
     # *IMPORTANT*: Don't manually change the version here. Use `make bump`, as described in readme
-    version='1.2.0-0.2',
+    version='1.2.0-0.3',
     description="""eth-typing: Common type annotations for ethereum python packages""",
     long_description_markdown_filename='README.md',
     author='The eth-typing contributors',
