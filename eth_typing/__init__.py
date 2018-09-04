@@ -24,5 +24,6 @@ from .encoding import (  # noqa: F401
 
 from .ethpm import (  # noqa: F401
     ContractName,
+    Manifest,
     URI,
 )
