@@ -7,7 +7,7 @@ from setuptools import (
 
 extras_require = {
     'test': [
-        "pytest>=3.6,<3.7",
+        "pytest>=4.4,<4.5",
         "pytest-xdist",
         "tox>=2.9.1,<3",
     ],
