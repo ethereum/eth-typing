@@ -6,3 +6,5 @@ class ForkName:
     Byzantium = 'Byzantium'
     Constantinople = 'Constantinople'
     Metropolis = 'Metropolis'
+    ConstantinopleFix = 'ConstantinopleFix'
+    Istanbul = 'Istanbul'
