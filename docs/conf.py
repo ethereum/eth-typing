@@ -53,7 +53,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = '<PROJECT_NAME>'
+project = 'eth-typing'
 copyright = '2019, The Ethereum Foundation'
 
 __version__ = setup_version
