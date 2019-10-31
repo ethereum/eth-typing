@@ -36,17 +36,20 @@ extras_require['dev'] = (
     extras_require['doc']
 )
 
+with open('./README.md') as readme:
+    long_description = readme.read()
+
 setup(
     name='eth-typing',
     # *IMPORTANT*: Don't manually change the version here. Use `make bump`, as described in readme
     version='2.2.0',
     description="""eth-typing: Common type annotations for ethereum python packages""",
-    long_description_markdown_filename='README.md',
+    long_description=long_description,
+    long_description_content_type='text/markdown',
     author='The eth-typing contributors',
     author_email='eth-typing@ethereum.org',
     url='https://github.com/ethereum/eth-typing',
     include_package_data=True,
-    setup_requires=['setuptools-markdown'],
     python_requires='>=3.5, <4',
     extras_require=extras_require,
     py_modules=['eth_typing'],
