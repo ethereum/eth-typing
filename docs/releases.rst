@@ -1,6 +1,21 @@
 Release Notes
 =============
 
+v2.2.0
+------
+
+- Update ``ForkName`` enum to include ``ConstantinopleFix`` and ``Istanbul``
+
+v2.1.0
+------
+
+- Add BLS types
+
+v2.0.0
+------
+
+- Expose Type Hints as per PEP 561
+
 v1.0.0
 ------
 
