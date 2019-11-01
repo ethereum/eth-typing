@@ -15,6 +15,7 @@ extras_require = {
         "flake8==3.4.1",
         "isort>=4.2.15,<5",
         "mypy==0.701",
+        "pydocstyle>=3.0.0,<4",
     ],
     'doc': [
         "Sphinx>=1.6.5,<2",
@@ -30,14 +31,16 @@ extras_require = {
 }
 
 extras_require['dev'] = (
-    extras_require['dev'] +
-    extras_require['test'] +
-    extras_require['lint'] +
+    extras_require['dev'] +  # noqa: W504
+    extras_require['test'] +  # noqa: W504
+    extras_require['lint'] +  # noqa: W504
     extras_require['doc']
 )
 
+
 with open('./README.md') as readme:
     long_description = readme.read()
+
 
 setup(
     name='eth-typing',
@@ -46,8 +49,8 @@ setup(
     description="""eth-typing: Common type annotations for ethereum python packages""",
     long_description=long_description,
     long_description_content_type='text/markdown',
-    author='The eth-typing contributors',
-    author_email='eth-typing@ethereum.org',
+    author='The Ethereum Foundation',
+    author_email='snakecharmers@ethereum.org',
     url='https://github.com/ethereum/eth-typing',
     include_package_data=True,
     python_requires='>=3.5, <4',
@@ -59,13 +62,14 @@ setup(
     packages=find_packages(exclude=["tests", "tests.*"]),
     package_data={'eth_typing': ['py.typed']},
     classifiers=[
-        'Development Status :: 3 - Alpha',
+        'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
         'Natural Language :: English',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: Implementation :: PyPy',
     ],
 )

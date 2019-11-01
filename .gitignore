@@ -45,6 +45,7 @@ docs/_build
 docs/modules.rst
 docs/*.internal.rst
 docs/*.utils.rst
+docs/*._utils.*
 
 # Blockchain
 chains
@@ -88,7 +89,10 @@ logs
 .idea/mongoSettings.xml
 
 # VIM temp files
-*.swp
+*.sw[op]
+
+# mypy
+.mypy_cache
 
 ## File-based project format:
 *.iws

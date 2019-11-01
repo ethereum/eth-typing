@@ -54,7 +54,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'eth-typing'
-copyright = '2018, The eth-typing contributors'
+copyright = '2019, The Ethereum Foundation'
 
 __version__ = setup_version
 # The version info for the project you're documenting, acts as replacement for
@@ -210,7 +210,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
   ('index', 'eth_typing.tex', 'eth-typing Documentation',
-   'The eth-typing contributors', 'manual'),
+   'The Ethereum Foundation', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -240,7 +240,7 @@ latex_documents = [
 # (source start file, name, description, authors, manual section).
 man_pages = [
     ('index', 'eth_typing', 'eth-typing Documentation',
-     ['The eth-typing contributors'], 1)
+     ['The Ethereum Foundation'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -254,7 +254,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
   ('index', 'eth-typing', 'eth-typing Documentation',
-   'The eth-typing contributors', 'eth-typing', 'Common type annotations for ethereum python packages',
+   'The Ethereum Foundation', 'eth-typing', 'Common type annotations for ethereum python packages',
    'Miscellaneous'),
 ]
 
@@ -273,7 +273,7 @@ texinfo_documents = [
 # -- Intersphinx configuration ------------------------------------------------
 
 intersphinx_mapping = {
-    'python': ('https://docs.python.org/3.5', None),
+    'python': ('https://docs.python.org/3.6', None),
 }
 
 # -- Doctest configuration ----------------------------------------
