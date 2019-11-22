@@ -85,11 +85,11 @@ Any bytestring representing a canonical address.
 HexAddress
 ~~~~~~~~~~
 
-Any string representing a hex encoded address.
+Any HexStr_ representing a hex encoded address.
 
 .. code-block:: python
 
-    HexAddress = NewType('HexAddress', str)
+    HexAddress = NewType('HexAddress', HexStr)
 
 ChecksumAddress
 ~~~~~~~~~~~~~~~
