@@ -6,6 +6,9 @@ from .bls import (  # noqa: F401
     BLSPubkey,
     BLSSignature,
 )
+from .discovery import (  # noqa: F401
+    NodeID,
+)
 from .encoding import (  # noqa: F401
     HexStr,
     Primitives,

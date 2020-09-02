@@ -49,6 +49,19 @@ Class that contains the different names used to represent hard forks on the Ethe
         Constantinople = 'Constantinople'
         Metropolis = 'Metropolis'
 
+Discovery
+---------
+
+NodeID
+~~~~~~
+
+A 32-byte identifier for a node in the Discovery DHT
+
+.. code-block:: python
+
+    NodeID = NewType('NodeID', bytes)
+
+
 EthPM
 -----
 
