@@ -10,7 +10,7 @@ Contents
     :maxdepth: 3
 
     types
-    releases
+    release_notes
 
 
 Indices and tables
