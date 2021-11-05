@@ -8,3 +8,6 @@ class ForkName:
     Metropolis = 'Metropolis'
     ConstantinopleFix = 'ConstantinopleFix'
     Istanbul = 'Istanbul'
+    Berlin = 'Berlin'
+    London = 'London'
+    ArrowGlacier = 'ArrowGlacier'
