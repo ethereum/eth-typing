@@ -53,7 +53,7 @@ setup(
     author_email='snakecharmers@ethereum.org',
     url='https://github.com/ethereum/eth-typing',
     include_package_data=True,
-    python_requires='>=3.6, <4',
+    python_requires='>=3.6, <3.11',
     extras_require=extras_require,
     py_modules=['eth_typing'],
     license="MIT",
@@ -71,6 +71,7 @@ setup(
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
         'Programming Language :: Python :: Implementation :: PyPy',
     ],
 )
