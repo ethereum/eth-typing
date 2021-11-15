@@ -1,6 +1,13 @@
 Release Notes
 =============
 
+v3.0.0
+------
+
+- Update ``ForkName`` enum to include ``Berlin``, ``London``, and ``ArrowGlacier``
+- Update Python support to include python 3.8-3.10
+- Remove Python 3.5 support
+
 v2.2.0
 ------
 
