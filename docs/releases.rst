@@ -1,6 +1,11 @@
 Release Notes
 =============
 
+v2.3.0
+------
+
+- Update ``ForkName`` enum to include ``Berlin``, ``London``, and ``ArrowGlacier``
+
 v2.2.0
 ------
 
