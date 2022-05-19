@@ -1,6 +1,11 @@
 Release Notes
 =============
 
+v3.1.0
+------
+
+- Added Python 3.11 support
+
 v3.0.0
 ------
 

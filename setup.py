@@ -45,7 +45,7 @@ with open('./README.md') as readme:
 setup(
     name='eth-typing',
     # *IMPORTANT*: Don't manually change the version here. Use `make bump`, as described in readme
-    version='3.0.0',
+    version='3.1.0',
     description="""eth-typing: Common type annotations for ethereum python packages""",
     long_description=long_description,
     long_description_content_type='text/markdown',
@@ -53,7 +53,7 @@ setup(
     author_email='snakecharmers@ethereum.org',
     url='https://github.com/ethereum/eth-typing',
     include_package_data=True,
-    python_requires='>=3.6, <3.11',
+    python_requires='>=3.6, <=3.11',
     extras_require=extras_require,
     py_modules=['eth_typing'],
     license="MIT",
@@ -72,6 +72,7 @@ setup(
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
         'Programming Language :: Python :: 3.10',
+        'Programming Language :: Python :: 3.11',
         'Programming Language :: Python :: Implementation :: PyPy',
     ],
 )
