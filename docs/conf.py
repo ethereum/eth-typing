@@ -80,6 +80,7 @@ release = __version__
 # directories to ignore when looking for source files.
 exclude_patterns = [
     '_build',
+    'eth_typing.rst',
     'modules.rst',
 ]
 
