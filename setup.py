@@ -18,7 +18,7 @@ extras_require = {
         "pydocstyle>=3.0.0,<4",
     ],
     'doc': [
-        "Sphinx>=1.6.5,<2",
+        "sphinx>=4.2.0,<5",
         "sphinx_rtd_theme>=0.1.9",
     ],
     'dev': [
