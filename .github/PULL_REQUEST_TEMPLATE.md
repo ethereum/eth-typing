@@ -13,8 +13,6 @@ Summary of approach.
 - [ ] Clean up commit history
 
 [//]: # (For important changes that should go into the release notes please add a newsfragment file as explained here: https://github.com/ethereum/eth-typing/blob/master/newsfragments/README.md)
-
-[//]: # (See: https://eth-typing.readthedocs.io/en/latest/contributing.html#pull-requests)
 - [ ] Add entry to the [release notes](https://github.com/ethereum/eth-typing/blob/master/newsfragments/README.md)
 
 #### Cute Animal Picture
