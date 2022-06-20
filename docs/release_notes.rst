@@ -16,7 +16,7 @@ v2.2.0 (2019-10-31)
 - Update ``ForkName`` enum to include ``ConstantinopleFix`` and ``Istanbul``
 
 v2.1.0 (2019-10-31)
-------
+-------------------
 
 - Add BLS types
 
