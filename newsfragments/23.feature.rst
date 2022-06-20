@@ -1,0 +1,1 @@
+Add new ``BLSPrivateKey`` type for BLS private key
