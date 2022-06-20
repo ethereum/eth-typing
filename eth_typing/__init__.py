@@ -3,6 +3,7 @@ from .abi import (  # noqa: F401
     TypeStr,
 )
 from .bls import (  # noqa: F401
+    BLSPrivateKey,
     BLSPubkey,
     BLSSignature,
 )
