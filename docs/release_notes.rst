@@ -3,6 +3,25 @@ Release Notes
 
 .. towncrier release notes start
 
+v3.1.0 (2022-06-22)
+-------------------
+
+Features
+~~~~~~~~
+
+- Setup towncrier to generate release notes from fragment files to ensure a higher standard
+  for release notes. (`#16 <https://github.com/ethereum/eth-typing/issues/16>`__)
+- Add new ``BLSPrivateKey`` type for BLS private key (`#23 <https://github.com/ethereum/eth-typing/issues/23>`__)
+- Add ``__all__`` property to ``__init__.py`` with appropriate types to explicitly export (`#28 <https://github.com/ethereum/eth-typing/issues/28>`__)
+- Add ``GrayGlacier`` to ``ForkName`` enum (`#30 <https://github.com/ethereum/eth-typing/issues/30>`__)
+
+
+Miscellaneous changes
+~~~~~~~~~~~~~~~~~~~~~
+
+- `#32 <https://github.com/ethereum/eth-typing/issues/32>`__
+
+
 v3.0.0 (2021-11-15)
 -------------------
 
