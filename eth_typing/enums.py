@@ -12,3 +12,4 @@ class ForkName:
     London = 'London'
     ArrowGlacier = 'ArrowGlacier'
     GrayGlacier = 'GrayGlacier'
+    Merge = 'Merge'
