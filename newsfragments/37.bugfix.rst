@@ -1,1 +1,0 @@
-Pin Python version to <4 instead of <3.11

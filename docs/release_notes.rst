@@ -3,6 +3,22 @@ Release Notes
 
 .. towncrier release notes start
 
+v3.2.0 (2022-09-14)
+-------------------
+
+Features
+~~~~~~~~
+
+- Add ``Merge`` to ``ForkName`` enum (`#34 <https://github.com/ethereum/eth-typing/issues/34>`__)
+
+
+Bugfixes
+~~~~~~~~
+
+- Pin Python version to <4 instead of <3.11 (`#37 <https://github.com/ethereum/eth-typing/issues/37>`__)
+- Rename ``Merge`` to ``Paris`` in ``ForkNameEnum`` (`#38 <https://github.com/ethereum/eth-typing/issues/38>`__)
+
+
 v3.1.0 (2022-06-22)
 -------------------
 
