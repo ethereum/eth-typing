@@ -54,7 +54,7 @@ setup(
     author_email='snakecharmers@ethereum.org',
     url='https://github.com/ethereum/eth-typing',
     include_package_data=True,
-    python_requires='>=3.6, <3.11',
+    python_requires='>=3.6, <4',
     extras_require=extras_require,
     py_modules=['eth_typing'],
     license="MIT",
