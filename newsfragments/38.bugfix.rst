@@ -1,0 +1,1 @@
+Rename ``Merge`` to ``Paris`` in ``ForkNameEnum``
