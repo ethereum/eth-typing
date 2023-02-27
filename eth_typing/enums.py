@@ -13,3 +13,4 @@ class ForkName:
     ArrowGlacier = 'ArrowGlacier'
     GrayGlacier = 'GrayGlacier'
     Paris = 'Paris'
+    Shanghai = 'Shanghai'
