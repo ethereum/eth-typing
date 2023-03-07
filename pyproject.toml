@@ -34,7 +34,7 @@ showcontent = true
 
 [[tool.towncrier.type]]
 directory = "internal"
-name = "Internal Changes - for <PROJECT_NAME> Contributors"
+name = "Internal Changes - for eth-typing Contributors"
 showcontent = true
 
 [[tool.towncrier.type]]
