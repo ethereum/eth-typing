@@ -3,6 +3,23 @@ Release Notes
 
 .. towncrier release notes start
 
+v3.3.0 (2023-03-08)
+-------------------
+
+Features
+~~~~~~~~
+
+- Add ``Shanghai`` to ``ForkName`` enum. (`#39 <https://github.com/ethereum/eth-typing/issues/39>`__)
+- Add support for python ``3.11``. (`#40 <https://github.com/ethereum/eth-typing/issues/40>`__)
+
+
+Internal Changes - for eth-typing Contributors
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- ``tox`` related updates for ``make docs`` to work properly. Remove some old references to python ``3.5`` and ``3.6``. (`#39 <https://github.com/ethereum/eth-typing/issues/39>`__)
+- Bump ``mypy`` version to ``0.910`` to avoid issues installing the "[dev]" extra on Python 3.10. Update test suite to require installing the full dependency suite to help catch these errors. (`#41 <https://github.com/ethereum/eth-typing/issues/41>`__)
+
+
 v3.2.0 (2022-09-14)
 -------------------
 

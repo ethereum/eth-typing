@@ -1,1 +1,0 @@
-Bump ``mypy`` version to ``0.910`` to avoid issues installing the "[dev]" extra on Python 3.10. Update test suite to require installing the full dependency suite to help catch these errors.

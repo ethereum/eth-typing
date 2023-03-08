@@ -1,1 +1,0 @@
-``tox`` related updates for ``make docs`` to work properly. Remove some old references to python ``3.5`` and ``3.6``.
