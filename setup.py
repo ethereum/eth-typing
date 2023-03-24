@@ -18,8 +18,8 @@ extras_require = {
         "pydocstyle>=3.0.0,<4",
     ],
     'doc': [
-        "sphinx>=4.2.0,<5",
-        "sphinx_rtd_theme>=0.1.9",
+        "sphinx>=5.0.0",
+        "sphinx_rtd_theme>=1.0.0",
         "towncrier>=21,<22",
     ],
     'dev': [
