@@ -10,7 +10,6 @@ Contents
     :maxdepth: 3
 
     types
-    eth_typing
     release_notes
 
 
