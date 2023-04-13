@@ -3,5 +3,5 @@ from typing import (
     Union,
 )
 
-HexStr = NewType('HexStr', str)
+HexStr = NewType("HexStr", str)
 Primitives = Union[bytes, int, bool]

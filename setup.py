@@ -26,6 +26,7 @@ extras_require = {
     "dev": [
         "bumpversion>=0.5.3",
         "pytest-watch>=4.1.0",
+        "tox>=4.0.0",
         "wheel",
         "twine",
         "ipython",
@@ -55,7 +56,7 @@ setup(
     author_email="snakecharmers@ethereum.org",
     url="https://github.com/ethereum/eth-typing",
     include_package_data=True,
-    python_requires=">=3.7, <4",
+    python_requires=">=3.7.2, <4",
     extras_require=extras_require,
     py_modules=["eth_typing"],
     license="MIT",
@@ -64,7 +65,7 @@ setup(
     packages=find_packages(exclude=["tests", "tests.*"]),
     package_data={"eth_typing": ["py.typed"]},
     classifiers=[
-        'Development Status :: 5 - Production/Stable',
+        "Development Status :: 5 - Production/Stable",
         "Intended Audience :: Developers",
         "License :: OSI Approved :: MIT License",
         "Natural Language :: English",

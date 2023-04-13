@@ -4,6 +4,6 @@ from typing import (
     NewType,
 )
 
-ContractName = NewType('ContractName', str)
-Manifest = NewType('Manifest', Dict[str, Any])
-URI = NewType('URI', str)
+ContractName = NewType("ContractName", str)
+Manifest = NewType("Manifest", Dict[str, Any])
+URI = NewType("URI", str)
