@@ -9,7 +9,7 @@ Contents
 .. toctree::
     :maxdepth: 3
 
-    types
+    <MODULE_NAME>
     release_notes
 
 
