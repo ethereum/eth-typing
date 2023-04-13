@@ -191,7 +191,7 @@ html_static_path = ["_static"]
 # html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = "<MODULE_NAME>doc"
+htmlhelp_basename = "eth_typingdoc"
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -211,8 +211,8 @@ latex_elements = {
 latex_documents = [
     (
         "index",
-        "<MODULE_NAME>.tex",
-        "<PROJECT_NAME> Documentation",
+        "eth_typing.tex",
+        "eth-typing Documentation",
         "The Ethereum Foundation",
         "manual",
     ),
@@ -246,8 +246,8 @@ latex_documents = [
 man_pages = [
     (
         "index",
-        "<MODULE_NAME>",
-        "<PROJECT_NAME> Documentation",
+        "eth_typing",
+        "eth-typing Documentation",
         ["The Ethereum Foundation"],
         1,
     )
@@ -265,11 +265,11 @@ man_pages = [
 texinfo_documents = [
     (
         "index",
-        "<PROJECT_NAME>",
-        "<PROJECT_NAME> Documentation",
+        "eth-typing",
+        "eth-typing Documentation",
         "The Ethereum Foundation",
-        "<PROJECT_NAME>",
-        "<SHORT_DESCRIPTION>",
+        "eth-typing",
+        "Common type annotations for ethereum python packages",
         "Miscellaneous",
     ),
 ]

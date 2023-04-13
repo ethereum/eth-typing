@@ -9,7 +9,7 @@ Contents
 .. toctree::
     :maxdepth: 3
 
-    <MODULE_NAME>
+    eth_typing
     release_notes
 
 
