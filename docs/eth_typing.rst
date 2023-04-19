@@ -1,69 +1,175 @@
-eth\_typing package
-===================
+Types
+=====
 
-Submodules
-----------
+The following types are available from the ``eth_typing`` module.
 
-eth\_typing.abi module
-----------------------
+i.e.
 
-.. automodule:: eth_typing.abi
-   :members:
-   :undoc-members:
-   :show-inheritance:
+.. code-block:: python
 
-eth\_typing.bls module
-----------------------
+    from eth_typing import TypeStr
 
-.. automodule:: eth_typing.bls
-   :members:
-   :undoc-members:
-   :show-inheritance:
+ABI
+---
 
-eth\_typing.discovery module
-----------------------------
+TypeStr
+~~~~~~~
 
-.. automodule:: eth_typing.discovery
-   :members:
-   :undoc-members:
-   :show-inheritance:
+String representation of a data type.
 
-eth\_typing.encoding module
----------------------------
+.. code-block:: python
 
-.. automodule:: eth_typing.encoding
-   :members:
-   :undoc-members:
-   :show-inheritance:
+    TypeStr = str
 
-eth\_typing.enums module
-------------------------
+Decodable
+~~~~~~~~~
 
-.. automodule:: eth_typing.enums
-   :members:
-   :undoc-members:
-   :show-inheritance:
+Binary data to be decoded.
 
-eth\_typing.ethpm module
-------------------------
+.. code-block:: python
 
-.. automodule:: eth_typing.ethpm
-   :members:
-   :undoc-members:
-   :show-inheritance:
+    Decodable = Union[bytes, bytearray]
 
-eth\_typing.evm module
-----------------------
+Enumerables
+-----------
 
-.. automodule:: eth_typing.evm
-   :members:
-   :undoc-members:
-   :show-inheritance:
+ForkName
+~~~~~~~~
 
-Module contents
----------------
+Class that contains the different names used to represent hard forks on the Ethereum network.
 
-.. automodule:: eth_typing
-   :members:
-   :undoc-members:
-   :show-inheritance:
+.. code-block:: python
+
+    class ForkName:
+        Frontier = 'Frontier'
+        Homestead = 'Homestead'
+        EIP150 = 'EIP150'
+        EIP158 = 'EIP158'
+        Byzantium = 'Byzantium'
+        Constantinople = 'Constantinople'
+        Metropolis = 'Metropolis'
+
+Discovery
+---------
+
+NodeID
+~~~~~~
+
+A 32-byte identifier for a node in the Discovery DHT
+
+.. code-block:: python
+
+    NodeID = NewType('NodeID', bytes)
+
+
+EthPM
+-----
+
+ContractName
+~~~~~~~~~~~~
+
+Any string conforming to the regular expression ``[a-zA-Z][a-zA-Z0-9_]{0,255}``.
+
+.. code-block:: python
+
+    ContractName = NewType('ContractName', str)
+
+URI
+~~~
+
+Any string that represents a URI.
+
+.. code-block:: python
+
+    URI = NewType('URI', str)
+
+EVM
+---
+
+Address
+~~~~~~~
+
+Any bytestring representing a canonical address.
+
+.. code-block:: python
+
+    Address = NewType('Address', bytes)
+
+HexAddress
+~~~~~~~~~~
+
+Any HexStr_ representing a hex encoded address.
+
+.. code-block:: python
+
+    HexAddress = NewType('HexAddress', HexStr)
+
+ChecksumAddress
+~~~~~~~~~~~~~~~
+
+Any HexAddress_ that is formatted according to ERC55_.
+
+.. _ERC55: https://github.com/ethereum/EIPs/issues/55
+
+.. code-block:: python
+
+    ChecksumAddress = NewType('ChecksumAddress', HexAddress)
+
+AnyAddress
+~~~~~~~~~~
+
+Any of Address_, HexAddress_, ChecksumAddress_.
+
+.. code-block:: python
+
+    AnyAddress = TypeVar('AnyAddress', Address, HexAddress, ChecksumAddress)
+
+Hash32
+~~~~~~
+
+Any 32 byte hash.
+
+.. code-block:: python
+
+    Hash32 = NewType('Hash32', bytes)
+
+BlockNumber
+~~~~~~~~~~~
+
+Any integer that represents a valid block number on a chain.
+
+.. code-block:: python
+
+    BlockNumber = NewType('BlockNumber', int)
+
+BlockIdentifier
+~~~~~~~~~~~~~~~
+
+Either a 32 byte hash or an integer block number
+
+.. code-block:: python
+
+    BlockIdentifier = Union[Hash32, BlockNumber]
+
+Encodings
+---------
+
+HexStr
+~~~~~~
+
+Any string that is hex encoded.
+
+.. code-block:: python
+
+    HexStr = NewType('HexStr', str)
+
+Primitives
+~~~~~~~~~~
+
+Any of `bytes`, `int`, or `bool` used as the `Primitive` arg for conversion utils in ETH-Utils_.
+
+.. _ETH-Utils: https://github.com/ethereum/eth-utils/
+
+.. code-block:: python
+
+    Primitives = Union[bytes, int, bool]

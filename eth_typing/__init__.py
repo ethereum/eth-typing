@@ -35,22 +35,16 @@ from .evm import (
 __all__ = (
     "Decodable",
     "TypeStr",
-
     "BLSPrivateKey",
     "BLSPubkey",
     "BLSSignature",
-
     "NodeID",
-
     "HexStr",
     "Primitives",
-
     "ForkName",
-
     "URI",
     "ContractName",
     "Manifest",
-
     "Address",
     "AnyAddress",
     "BlockIdentifier",

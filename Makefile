@@ -28,10 +28,11 @@ clean-pyc:
 	find . -name '__pycache__' -exec rm -rf {} +
 
 lint:
-	tox -elint
+	tox -e lint
 
 lint-roll:
-	isort --recursive eth_typing tests
+	isort eth_typing tests
+	black eth_typing tests setup.py
 	$(MAKE) lint
 
 test:
@@ -50,10 +51,12 @@ validate-docs:
 	python ./newsfragments/validate_files.py
 	towncrier build --draft --version preview
 
-docs: build-docs validate-docs
+check-docs: build-docs validate-docs
+
+docs: check-docs
 	open docs/_build/html/index.html
 
-linux-docs: build-docs
+linux-docs: check-docs
 	xdg-open docs/_build/html/index.html
 
 check-bump:
@@ -80,10 +83,11 @@ release: check-bump clean
 	git config commit.gpgSign true
 	bumpversion $(bump)
 	git push upstream && git push upstream --tags
-	python setup.py sdist bdist_wheel
+	python -m build
 	twine upload dist/*
 	git config commit.gpgSign "$(CURRENT_SIGN_SETTING)"
 
+
 dist: clean
-	python setup.py sdist bdist_wheel
+	python -m build
 	ls -l dist
