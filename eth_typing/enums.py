@@ -14,3 +14,4 @@ class ForkName:
     GrayGlacier = "GrayGlacier"
     Paris = "Paris"
     Shanghai = "Shanghai"
+    Cancun = "Cancun"
