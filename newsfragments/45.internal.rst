@@ -1,0 +1,1 @@
+For CircleCI builds, update ``pip`` and pip install ``tox`` under sys instead of ``--user`` to avoid ``virtualenv`` versioning issues.
