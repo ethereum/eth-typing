@@ -3,6 +3,29 @@ Release Notes
 
 .. towncrier release notes start
 
+eth-typing v3.4.0 (2023-06-07)
+------------------------------
+
+Improved Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+- pull in ethereum-python-project-template updates (`#44 <https://github.com/ethereum/eth-typing/issues/44>`__)
+
+
+Features
+~~~~~~~~
+
+- Add ``Cancun`` to ``ForkName`` enum. (`#45 <https://github.com/ethereum/eth-typing/issues/45>`__)
+
+
+Internal Changes - for eth-typing Contributors
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- remove unused docs deps, bump version of remaining (`#43 <https://github.com/ethereum/eth-typing/issues/43>`__)
+- pull in ethereum-python-project-template updates (`#44 <https://github.com/ethereum/eth-typing/issues/44>`__)
+- For CircleCI builds, update ``pip`` and pip install ``tox`` under sys instead of ``--user`` to avoid ``virtualenv`` versioning issues. (`#45 <https://github.com/ethereum/eth-typing/issues/45>`__)
+
+
 v3.3.0 (2023-03-08)
 -------------------
 
