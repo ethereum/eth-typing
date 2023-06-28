@@ -1,0 +1,1 @@
+Borrowing from the typing in web3.py, open up ``BlockIdentifier`` to include ``BlockParams`` (e.g. "latest", "finalized", etc..) as well as other valid values.
