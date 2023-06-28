@@ -4,13 +4,18 @@ from typing import (
     Union,
 )
 
+from typing_extensions import (
+    Literal,
+)
+
 from .encoding import (
     HexStr,
 )
 
 Hash32 = NewType("Hash32", bytes)
 BlockNumber = NewType("BlockNumber", int)
-BlockIdentifier = Union[BlockNumber, Hash32]
+BlockParams = Literal["latest", "earliest", "pending", "safe", "finalized"]
+BlockIdentifier = Union[BlockParams, BlockNumber, Hash32, HexStr, int]
 
 Address = NewType("Address", bytes)
 HexAddress = NewType("HexAddress", HexStr)
