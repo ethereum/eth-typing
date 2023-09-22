@@ -1,1 +1,1 @@
-Enums for Ethereum networks provided by `ChainID` class.
+Add an ``IntEnum`` class, ``ChainID``, defining EVM-compatible network name enums as their respective chain id ``int`` values.

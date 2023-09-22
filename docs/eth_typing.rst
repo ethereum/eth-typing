@@ -53,7 +53,7 @@ Class that contains the different names used to represent hard forks on the Ethe
 ChainId
 ~~~~~~~
 
-Class which contains enums for each Ethereum network chain identifier.
+`IntEnum` class defining EVM-compatible network name enums as their respective chain id `int` values.
 
 To learn more about chain IDs, see [CAIP-2](https://github.com/ChainAgnostic/CAIPs/blob/main/CAIPs/caip-2.md) for details.
 
