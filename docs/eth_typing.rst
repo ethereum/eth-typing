@@ -55,13 +55,13 @@ ChainId
 
 `IntEnum` class defining EVM-compatible network name enums as their respective chain id `int` values.
 
-To learn more about chain IDs, see [CAIP-2](https://github.com/ChainAgnostic/CAIPs/blob/main/CAIPs/caip-2.md) for details.
+To learn more about chain ids, see [CAIP-2](https://github.com/ChainAgnostic/CAIPs/blob/main/CAIPs/caip-2.md) for details.
 
-The list of chain IDs is available from the [ethereum-lists/chains](https://github.com/ethereum-lists/chains) repository.
+The list of chain ids is available from the [ethereum-lists/chains](https://github.com/ethereum-lists/chains) repository.
 
 .. code-block:: python
 
-    class ChainID(IntEnum):
+    class ChainId(IntEnum):
         # L1 networks
     	ETH = 1
     	EXP = 2

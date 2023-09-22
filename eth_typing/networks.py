@@ -3,7 +3,7 @@ from enum import (
 )
 
 
-class ChainID(IntEnum):
+class ChainId(IntEnum):
     ETH = 1
     EXP = 2
     ROP = 3

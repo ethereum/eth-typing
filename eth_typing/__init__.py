@@ -32,7 +32,7 @@ from .evm import (
     HexAddress,
 )
 from .networks import (
-    ChainID,
+    ChainId,
 )
 
 __all__ = (
@@ -45,7 +45,7 @@ __all__ = (
     "HexStr",
     "Primitives",
     "ForkName",
-    "ChainID",
+    "ChainId",
     "URI",
     "ContractName",
     "Manifest",

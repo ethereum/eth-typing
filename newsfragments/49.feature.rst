@@ -1,1 +1,1 @@
-Add an ``IntEnum`` class, ``ChainID``, defining EVM-compatible network name enums as their respective chain id ``int`` values.
+Add an ``IntEnum`` class, ``ChainId``, defining EVM-compatible network name enums as their respective chain id ``int`` values.
