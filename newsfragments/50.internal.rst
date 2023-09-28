@@ -1,0 +1,1 @@
+Fix release command by checking the git remote upstream configuration and merge other minor template updates.
