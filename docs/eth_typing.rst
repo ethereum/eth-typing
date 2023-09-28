@@ -49,6 +49,30 @@ Class that contains the different names used to represent hard forks on the Ethe
         Constantinople = 'Constantinople'
         Metropolis = 'Metropolis'
 
+
+ChainId
+~~~~~~~
+
+`IntEnum` class defining EVM-compatible network name enums as their respective chain id `int` values.
+
+To learn more about chain ids, see [CAIP-2](https://github.com/ChainAgnostic/CAIPs/blob/main/CAIPs/caip-2.md) for details.
+
+The list of chain ids is available from the [ethereum-lists/chains](https://github.com/ethereum-lists/chains) repository.
+
+.. code-block:: python
+
+    class ChainId(IntEnum):
+        # L1 networks
+    	ETH = 1
+    	EXP = 2
+        ROP = 3
+        RIN = 4
+        GOR = 5
+        # L2 networks
+        OETH = 10
+        GNO = 100
+
+
 Discovery
 ---------
 

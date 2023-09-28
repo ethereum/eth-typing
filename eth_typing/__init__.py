@@ -31,6 +31,9 @@ from .evm import (
     Hash32,
     HexAddress,
 )
+from .networks import (
+    ChainId,
+)
 
 __all__ = (
     "Decodable",
@@ -42,6 +45,7 @@ __all__ = (
     "HexStr",
     "Primitives",
     "ForkName",
+    "ChainId",
     "URI",
     "ContractName",
     "Manifest",
