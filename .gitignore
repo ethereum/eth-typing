@@ -20,6 +20,7 @@ lib
 lib64
 pip-wheel-metadata
 venv*
+.venv*
 
 # Installer logs
 pip-log.txt
@@ -51,7 +52,7 @@ docs/*._utils.*
 # Blockchain
 chains
 
-# Hypothese Property base testing
+# Hypothesis Property base testing
 .hypothesis
 
 # tox/pytest cache

@@ -190,7 +190,7 @@ html_theme = "sphinx_rtd_theme"
 # html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = "eth_typingdoc"
+htmlhelp_basename = "eth_typingdocs"
 
 
 # -- Options for LaTeX output ---------------------------------------------

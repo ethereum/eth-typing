@@ -12,7 +12,6 @@ Contents
     eth_typing
     release_notes
 
-
 Indices and tables
 ------------------
 

@@ -5,7 +5,6 @@
 [![PyPI version](https://badge.fury.io/py/eth-typing.svg)](https://badge.fury.io/py/eth-typing)
 [![Python versions](https://img.shields.io/pypi/pyversions/eth-typing.svg)](https://pypi.python.org/pypi/eth-typing)
 [![Docs build](https://readthedocs.org/projects/eth-typing/badge/?version=latest)](https://eth-typing.readthedocs.io/en/latest/?badge=latest)
-   
 
 Common type annotations for ethereum python packages.
 
@@ -14,7 +13,7 @@ Read more in the [documentation on ReadTheDocs](https://eth-typing.readthedocs.i
 ## Quickstart
 
 ```sh
-pip install eth-typing
+python -m pip install eth-typing
 ```
 
 ## Developer Setup
@@ -37,7 +36,7 @@ git clone git@github.com:ethereum/eth-typing.git
 cd eth-typing
 virtualenv -p python3 venv
 . venv/bin/activate
-pip install -e ".[dev]"
+python -m pip install -e ".[dev]"
 ```
 
 ### Release setup
