@@ -5,7 +5,6 @@
 [![PyPI version](https://badge.fury.io/py/eth-typing.svg)](https://badge.fury.io/py/eth-typing)
 [![Python versions](https://img.shields.io/pypi/pyversions/eth-typing.svg)](https://pypi.python.org/pypi/eth-typing)
 [![Docs build](https://readthedocs.org/projects/eth-typing/badge/?version=latest)](https://eth-typing.readthedocs.io/en/latest/?badge=latest)
-   
 
 Common type annotations for ethereum python packages.
 
@@ -14,7 +13,7 @@ Read more in the [documentation on ReadTheDocs](https://eth-typing.readthedocs.i
 ## Quickstart
 
 ```sh
-pip install eth-typing
+python -m pip install eth-typing
 ```
 
 ## Developer Setup
@@ -37,7 +36,7 @@ git clone git@github.com:ethereum/eth-typing.git
 cd eth-typing
 virtualenv -p python3 venv
 . venv/bin/activate
-pip install -e ".[dev]"
+python -m pip install -e ".[dev]"
 ```
 
 ### Release setup
@@ -55,7 +54,7 @@ The version format for this repo is `{major}.{minor}.{patch}` for stable, and
 
 To issue the next version in line, specify which part to bump,
 like `make release bump=minor` or `make release bump=devnum`. This is typically done from the
-master branch, except when releasing a beta (in which case the beta is released from master,
+main branch, except when releasing a beta (in which case the beta is released from main,
 and the previous stable branch is released from said branch).
 
 If you are in a beta version, `make release bump=stage` will switch to a stable.
