@@ -3,6 +3,24 @@ Release Notes
 
 .. towncrier release notes start
 
+eth-typing v3.5.0 (2023-09-29)
+------------------------------
+
+Features
+~~~~~~~~
+
+- Borrowing from the typing in web3.py, open up ``BlockIdentifier`` to include ``BlockParams`` (e.g. "latest", "finalized", etc..) as well as other valid values. (`#47 <https://github.com/ethereum/eth-typing/issues/47>`__)
+- Add an ``IntEnum`` class, ``ChainId``, defining EVM-compatible network name enums as their respective chain id ``int`` values. (`#49 <https://github.com/ethereum/eth-typing/issues/49>`__)
+
+
+Internal Changes - for eth-typing Contributors
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- Add the tests/ directory to the distributed tarball (`#46 <https://github.com/ethereum/eth-typing/issues/46>`__)
+- Added ``build.os`` config for readthedocs (`#48 <https://github.com/ethereum/eth-typing/issues/48>`__)
+- Fix release command by checking the git remote upstream configuration and merge other minor template updates. (`#50 <https://github.com/ethereum/eth-typing/issues/50>`__)
+
+
 eth-typing v3.4.0 (2023-06-07)
 ------------------------------
 
