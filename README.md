@@ -39,6 +39,24 @@ virtualenv -p python3 venv
 python -m pip install -e ".[dev]"
 ```
 
+### Network ChainIds
+
+A list of `ChainId` constants reside in the eth-typing/networks.py file. This list should be kept
+in sync with the network list available on
+[chainid.network](https://chainid.network/chains_mini.json).
+
+To keep the list up to date, run the following command:
+
+```sh
+python update_network_chain_ids.py
+```
+
+This will remove the original networks file and output a new file with the new networks added.
+
+Check that the output file is correct and that constants are defined as expected. If
+the shortName contains special characters it may not work as a constant variable name.
+The script should be updated to transform names into valid constants as new cases occur.
+
 ### Release setup
 
 To release a new version:
