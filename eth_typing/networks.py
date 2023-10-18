@@ -141,6 +141,7 @@ class ChainId(IntEnum):
     OPTEST = 141
     DAX = 142
     PHI = 144
+    SHIMMEREVM_MAINNET = 148
     SIXT = 150
     RBN = 151
     RBN_DEVNET = 152
@@ -175,6 +176,7 @@ class ChainId(IntEnum):
     BTN = 210
     EDI = 211
     MAKALU = 212
+    SHINARIUM = 214
     SIN2 = 217
     SO1_OLD = 218
     ASK = 222
@@ -196,6 +198,7 @@ class ChainId(IntEnum):
     LACHAIN = 274
     ZKSYNC_GOERLI = 280
     BOBA = 288
+    ORDERLY = 291
     HEDERA_MAINNET = 295
     HEDERA_TESTNET = 296
     HEDERA_PREVIEWNET = 297
@@ -269,6 +272,7 @@ class ChainId(IntEnum):
     SNS = 700
     BCS = 707
     TBCS = 708
+    FURY = 710
     SHIBARIUM = 719
     LYC = 721
     TCANTO = 740
@@ -310,6 +314,7 @@ class ChainId(IntEnum):
     T3PLS = 942
     T4PLS = 943
     MUNODE = 956
+    BTC20 = 963
     CCN = 970
     HUYGENS = 971
     ASCRAEUS = 972
@@ -429,6 +434,7 @@ class ChainId(IntEnum):
     LIGHTLINK_PHOENIX = 1890
     LIGHTLINK_PEGASUS = 1891
     BOYA = 1898
+    SCN = 1904
     BITCI = 1907
     TBITCI = 1908
     ONUS_TESTNET = 1945
@@ -466,6 +472,7 @@ class ChainId(IntEnum):
     SHRAPNEL = 2044
     STOS_TESTNET = 2047
     STOS_MAINNET = 2048
+    MOVO = 2049
     QKA = 2077
     AIR = 2088
     ALGL = 2089
@@ -515,6 +522,8 @@ class ChainId(IntEnum):
     _3ULL = 3011
     ORL = 3031
     BFC = 3068
+    IMMU3 = 3100
+    VFI = 3102
     FILECOIN_HYPERSPACE = 3141
     DUBX = 3269
     TESTDUBX = 3270
@@ -555,6 +564,7 @@ class ChainId(IntEnum):
     BNIT = 4096
     BNIM = 4099
     AIOZ_TESTNET = 4102
+    HUMANS_TESTNET = 4139
     TPBXT = 4141
     PHIV1 = 4181
     LUKSO_TESTNET = 4201
@@ -650,6 +660,7 @@ class ChainId(IntEnum):
     BASE = 8453
     TOKI = 8654
     TOKI_TESTNET = 8655
+    HELA = 8668
     OLO = 8723
     TOLO = 8724
     ALPH = 8738
@@ -720,6 +731,7 @@ class ChainId(IntEnum):
     FIBO = 12306
     BLGCHAIN = 12321
     STEPTEST = 12345
+    ASTRZK = 12611
     TRIK = 12715
     TQNET = 12890
     SPS = 13000
@@ -739,11 +751,13 @@ class ChainId(IntEnum):
     AIRDAO = 16718
     TIVAR = 16888
     HOLESKY = 17000
+    G8CM = 17171
     PCT = 17180
     EOS = 17777
     ZKST = 18000
     STN = 18122
     POM = 18159
+    G8CT = 18181
     MXCZKEVM = 18686
     HMV = 19011
     BTCIX = 19845
@@ -778,8 +792,11 @@ class ChainId(IntEnum):
     BRISE = 32520
     FSN = 32659
     ZIL = 32769
+    ZIL_ISOLATED_SERVER = 32990
     ZIL_TESTNET = 33101
     AVS = 33333
+    ZIL_DEVNET = 33385
+    ZQ2_DEVNET = 33469
     J2O = 35011
     Q = 35441
     Q_TESTNET = 35443
@@ -794,6 +811,7 @@ class ChainId(IntEnum):
     CELO = 42220
     EMERALD_TESTNET = 42261
     EMERALD = 42262
+    GST = 42801
     KETH = 42888
     AVAETH = 43110
     FUJI = 43113
@@ -837,6 +855,7 @@ class ChainId(IntEnum):
     SRC = 65450
     MCL = 67390
     COSMIC = 67588
+    DM2 = 68770
     CNDR = 69420
     TKM0 = 70000
     TKM1 = 70001
@@ -849,6 +868,7 @@ class ChainId(IntEnum):
     VT = 73799
     MVM = 73927
     RESIN = 75000
+    FNC = 77238
     VSCM = 77612
     TORONET = 77777
     FIRENZE = 78110
@@ -869,6 +889,7 @@ class ChainId(IntEnum):
     MIZANAPRIV = 81363
     QNET = 81720
     BASEGOR = 84531
+    BASESEP = 84532
     AERIE = 84886
     CYBER = 85449
     NAUTTEST = 88002
@@ -976,11 +997,14 @@ class ChainId(IntEnum):
     BRNKC = 641230
     ALL = 651940
     VPIONEER = 666666
+    HELA_TESTNET = 666888
     BRNKCTEST = 751230
     MIEXS = 761412
+    MDLRM = 776877
     OCTA = 800001
     CURVEM = 827431
     BLOQS4GOOD = 846000
+    DODAO = 855456
     VISION = 888888
     PSC_S0 = 900000
     PSC_T_S0 = 910000
@@ -988,6 +1012,7 @@ class ChainId(IntEnum):
     PSC_D_S1 = 920001
     TFNCY = 923018
     ELV = 955305
+    AZKTN = 1261120
     ETHO = 1313114
     XERO = 1313500
     KINTSUGI = 1337702
