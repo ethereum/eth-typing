@@ -1,1 +1,0 @@
-Add ``types-setuptools`` to support pkg_resources and __version__
