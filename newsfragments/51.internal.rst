@@ -1,1 +1,0 @@
-Add script to maintain Network constants listed in the networks module.
