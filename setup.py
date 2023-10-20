@@ -9,7 +9,6 @@ extras_require = {
     "test": [
         "pytest>=7.0.0",
         "pytest-xdist>=2.4.0",
-        "types-setuptools",
     ],
     "lint": [
         "flake8==6.0.0",  # flake8 claims semver but adds new warnings at minor releases, leave it pinned.
@@ -51,7 +50,7 @@ with open("./README.md") as readme:
 setup(
     name="eth-typing",
     # *IMPORTANT*: Don't manually change the version here. Use `make bump`, as described in readme
-    version="3.5.2",
+    version="3.5.1",
     description="""eth-typing: Common type annotations for ethereum python packages""",
     long_description=long_description,
     long_description_content_type="text/markdown",
