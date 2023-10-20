@@ -3,22 +3,14 @@ Release Notes
 
 .. towncrier release notes start
 
-eth-typing v3.5.2 (2023-10-19)
-------------------------------
-
-Internal Changes - for eth-typing Contributors
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-- Add ``types-setuptools`` to support pkg_resources and __version__ (`#52 <https://github.com/ethereum/eth-typing/issues/52>`__)
-
-
-eth-typing v3.5.1 (2023-10-19)
+eth-typing v3.5.1 (2023-10-20)
 ------------------------------
 
 Internal Changes - for eth-typing Contributors
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - Add script to maintain Network constants listed in the networks module. (`#51 <https://github.com/ethereum/eth-typing/issues/51>`__)
+- Add ``types-setuptools`` to support pkg_resources and __version__ (`#52 <https://github.com/ethereum/eth-typing/issues/52>`__)
 
 
 eth-typing v3.5.0 (2023-09-29)
