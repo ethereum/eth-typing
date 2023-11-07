@@ -67,11 +67,13 @@ notes: check-bump
 	towncrier build --yes --version $(UPCOMING_VERSION)
 	# Before we bump the version, make sure that the towncrier-generated docs will build
 	make build-docs
-	git commit -m "Compile release notes"
+	git commit -m "Compile release notes for v$(UPCOMING_VERSION)"
 
 release: check-bump test clean
 	# require that you be on a branch that's linked to upstream/master
-	git remote -v | grep "upstream\tgit@github.com:ethereum/eth-typing.git (push)\|upstream\thttps://github.com/ethereum/eth-typing (push)"
+	@git remote -v | grep \
+		-e "upstream\tgit@github.com:ethereum/eth-typing.git (push)" \
+		-Ee "upstream\thttps://(www.)?github.com/ethereum/eth-typing \(push\)"
 	# verify that docs build correctly
 	./newsfragments/validate_files.py is-empty
 	make build-docs
