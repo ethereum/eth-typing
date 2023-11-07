@@ -37,7 +37,7 @@ class ChainId(IntEnum):
     TRSK = 31
     GOODT = 32
     GOOD = 33
-    DTH = 34
+    SCAI = 34
     TBWG = 35
     DX = 36
     XPLA = 37
@@ -172,6 +172,8 @@ class ChainId(IntEnum):
     AOX = 200
     MOACTEST = 201
     OBNB = 204
+    VCTEST = 206
+    VC = 207
     UTX = 208
     BTN = 210
     EDI = 211
@@ -225,6 +227,7 @@ class ChainId(IntEnum):
     PLS = 369
     TCNT = 371
     LISINSKI = 385
+    N3 = 399
     HPN = 400
     OZO_TST = 401
     PEPE = 411
@@ -537,8 +540,9 @@ class ChainId(IntEnum):
     JFIN = 3501
     PANDO_MAINNET = 3601
     PANDO_TESTNET = 3602
-    BTCT = 3636
+    BTNX = 3636
     BTCM = 3637
+    ISLAMI = 3639
     JOULEVERSE = 3666
     BTX = 3690
     EMPIRE = 3693
@@ -583,6 +587,7 @@ class ChainId(IntEnum):
     MANTLE = 5000
     MANTLE_TESTNET = 5001
     TREASURENET = 5002
+    MNT_SEP = 5003
     TNTEST = 5005
     FTN = 5165
     TLC = 5177
@@ -653,6 +658,7 @@ class ChainId(IntEnum):
     FLANA = 8135
     MIZANA = 8136
     TBOC = 8181
+    TTQF = 8194
     CYPRESS = 8217
     BTON = 8272
     KORTHO = 8285
@@ -782,6 +788,7 @@ class ChainId(IntEnum):
     HTZ = 26600
     OAC = 26863
     OBGOR = 28528
+    MCHV = 29548
     PIECE = 30067
     CERI = 30103
     ESN = 31102
@@ -827,8 +834,9 @@ class ChainId(IntEnum):
     TNRG = 49797
     LOE = 50001
     TGTON = 50021
-    OPSIDE_TESTNET = 51178
+    LUMOZ_TESTNET = 51178
     SRDXM = 51712
+    ETN_MAINNET = 52014
     DFK = 53935
     ISLMT = 54211
     TORONETTESTNET = 54321
@@ -937,6 +945,7 @@ class ChainId(IntEnum):
     TAIKO_L2 = 167005
     TAIKO_L3 = 167006
     TKO_JOLNIR = 167007
+    BDCC = 188710
     CONDOR = 188881
     MILKTADA = 200101
     MILKTALGO = 200202
@@ -963,6 +972,7 @@ class ChainId(IntEnum):
     FILECOIN_CALIBRATION = 314159
     TC = 330844
     AVST = 333331
+    N3_TEST = 333333
     OONETEST = 333666
     OONEDEV = 333777
     SPARTA = 333888
@@ -1012,6 +1022,7 @@ class ChainId(IntEnum):
     PSC_D_S1 = 920001
     TFNCY = 923018
     ELV = 955305
+    ECROX = 988207
     AZKTN = 1261120
     ETHO = 1313114
     XERO = 1313500
@@ -1022,11 +1033,13 @@ class ChainId(IntEnum):
     PLIAN_MAINNET = 2099156
     PLATONDEV = 2203181
     PLATONDEV2 = 2206132
+    DPU = 2611555
     FILECOIN_BUTTERFLY = 3141592
     MANTATESTNET = 3441005
     ALT_ZEROGAS = 4000003
     WORLDSCAL = 4281033
     MXC = 5167003
+    ETN_TESTNET = 5201420
     IMVERSED = 5555555
     IMVERSED_TESTNET = 5555558
     SAAKURU = 7225878
@@ -1059,6 +1072,7 @@ class ChainId(IntEnum):
     AQUA = 61717561
     BAKERLOO_0 = 65010000
     PICCADILLY_0 = 65100000
+    FRAMETEST = 68840142
     TEAM = 88888888
     TOYS = 99415706
     GTH = 192837465
@@ -1073,6 +1087,7 @@ class ChainId(IntEnum):
     TGTH = 356256156
     DGTH = 486217935
     NEBULA_STAGING = 503129905
+    ZSEP = 999999999
     IPOS = 1122334455
     CYB = 1146703430
     HUMAN_MAINNET = 1273227453
