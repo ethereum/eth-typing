@@ -3,6 +3,15 @@ Release Notes
 
 .. towncrier release notes start
 
+eth-typing v3.5.2 (2023-11-07)
+------------------------------
+
+Miscellaneous Changes
+~~~~~~~~~~~~~~~~~~~~~
+
+- `#54 <https://github.com/ethereum/eth-typing/issues/54>`__
+
+
 eth-typing v3.5.1 (2023-10-20)
 ------------------------------
 
