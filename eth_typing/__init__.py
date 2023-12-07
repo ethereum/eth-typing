@@ -2,7 +2,6 @@ from importlib.metadata import (
     version as __version,
 )
 
-
 from .abi import (
     Decodable,
     TypeStr,
