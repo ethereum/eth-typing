@@ -1,11 +1,8 @@
 from typing import (
+    Literal,
     NewType,
     TypeVar,
     Union,
-)
-
-from typing_extensions import (
-    Literal,
 )
 
 from .encoding import (
