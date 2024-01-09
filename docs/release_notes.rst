@@ -3,6 +3,22 @@ Release Notes
 
 .. towncrier release notes start
 
+eth-typing v4.0.0 (2024-01-09)
+------------------------------
+
+Breaking changes
+~~~~~~~~~~~~~~~~
+
+- Drop python 3.7 support (`#55 <https://github.com/ethereum/eth-typing/issues/55>`__)
+
+
+Internal Changes - for eth-typing Contributors
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- Merge updates from the project template, notably: use ``pre-commit`` for linting and change the name of the ``master`` branch to ``main`` (`#55 <https://github.com/ethereum/eth-typing/issues/55>`__)
+- Fixed booleans in ``pyproject.toml`` and added a test for the presence of the ``eth_typing.__version__`` attribute (`#56 <https://github.com/ethereum/eth-typing/issues/56>`__)
+
+
 eth-typing v3.5.2 (2023-11-07)
 ------------------------------
 
