@@ -1,0 +1,1 @@
+Fixed booleans in ``pyproject.toml`` and added a test for the presence of the ``eth_typing.__version__`` attribute
