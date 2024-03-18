@@ -1,0 +1,1 @@
+Merge template updates, adding build tests for all docs formats, add ``blocklint`` to lint tools
