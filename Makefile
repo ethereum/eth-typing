@@ -73,7 +73,7 @@ notes: check-bump validate-newsfragments
 
 release: check-bump clean
 	# require that upstream is configured for ethereum/eth-typing
-	@git remote -v | grep -E "upstream\tgit@github.com:ethereum/eth-typing.git \(push\)|upstream\thttps://(www.)?github.com/ethereum/eth-typing \(push\)"
+	@git remote -v | grep "upstream[[:space:]]git@github.com:ethereum/eth-typing.git (push)\|upstream[[:space:]]https://github.com/ethereum/eth-typing (push)"
 	# verify that docs build correctly
 	./newsfragments/validate_files.py is-empty
 	make build-docs
