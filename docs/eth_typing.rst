@@ -90,27 +90,6 @@ A 32-byte identifier for a node in the Discovery DHT
     NodeID = NewType('NodeID', bytes)
 
 
-EthPM
------
-
-ContractName
-~~~~~~~~~~~~
-
-Any string conforming to the regular expression ``[a-zA-Z][a-zA-Z0-9_]{0,255}``.
-
-.. code-block:: python
-
-    ContractName = NewType('ContractName', str)
-
-URI
-~~~
-
-Any string that represents a URI.
-
-.. code-block:: python
-
-    URI = NewType('URI', str)
-
 EVM
 ---
 
