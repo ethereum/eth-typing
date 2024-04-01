@@ -62,6 +62,18 @@ The list of chain ids is available from the `ethereum-lists/chains`_ repository.
         OETH = 10
         GNO = 100
 
+Networks
+--------
+
+URI
+~~~
+
+Any string that represents a URI.
+
+.. code-block:: python
+
+    URI = NewType('URI', str)
+
 
 Discovery
 ---------
@@ -75,29 +87,6 @@ A 32-byte identifier for a node in the Discovery DHT
 
     NodeID = NewType('NodeID', bytes)
 
-
-EthPM
------
-
-DEPRECATED: The `eth_typing.EthPM` module is deprecated and will be removed in a future release.
-
-ContractName
-~~~~~~~~~~~~
-
-Any string conforming to the regular expression ``[a-zA-Z][a-zA-Z0-9_]{0,255}``.
-
-.. code-block:: python
-
-    ContractName = NewType('ContractName', str)
-
-URI
-~~~
-
-Any string that represents a URI.
-
-.. code-block:: python
-
-    URI = NewType('URI', str)
 
 EVM
 ---
