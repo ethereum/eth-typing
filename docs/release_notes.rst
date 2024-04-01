@@ -3,6 +3,21 @@ Release Notes
 
 .. towncrier release notes start
 
+eth-typing v4.1.0 (2024-04-01)
+------------------------------
+
+Features
+~~~~~~~~
+
+- Add python3.12 support (`#57 <https://github.com/ethereum/eth-typing/issues/57>`__)
+
+
+Internal Changes - for eth-typing Contributors
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- Merge template updates, adding build tests for all docs formats, add ``blocklint`` to lint tools (`#57 <https://github.com/ethereum/eth-typing/issues/57>`__)
+
+
 eth-typing v4.0.0 (2024-01-09)
 ------------------------------
 
