@@ -9,8 +9,82 @@ i.e.
 
     from eth_typing import TypeStr
 
+Application Binary Interface
+----------------------------
+
 ABI
----
+~~~
+
+List of components representing function and event interfaces (elements of an ABI).
+
+.. code-block:: python
+
+    ABI = Sequence[Union[ABIFunction, ABIEvent]]
+
+ABIElement
+~~~~~~~~~~
+
+Base type for `ABIFunction` and `ABIEvent` types.
+
+.. code-block:: python
+
+    ABIElement = Union[ABIFunction, ABIEvent]
+
+ABIFunction
+~~~~~~~~~~~
+
+TypedDict representing the `ABI` for a function.
+
+.. code-block:: python
+
+    class ABIFunction(TypedDict, total=False)
+
+ABIFunctionParams
+~~~~~~~~~~~~~~~~~
+
+TypedDict representing the `ABI` for function parameters.
+
+.. code-block:: python
+
+    class ABIFunctionParams(TypedDict, total=False)
+
+ABIFunctionComponents
+~~~~~~~~~~~~~~~~~~~~~
+
+TypedDict representing the `ABI` for nested function parameters.
+
+Used as a component of `ABIFunctionParams`.
+
+.. code-block:: python
+
+    class ABIFunctionComponents(TypedDict, total=False)
+
+ABIFunctionInfo
+~~~~~~~~~~~~~~~
+
+TypedDict to represent an `ABIFunction` with the function selector and corresponding arguments.
+
+.. code-block:: python
+
+    class ABIFunctionInfo(TypedDict, total=False)
+
+ABIEvent
+~~~~~~~~
+
+TypedDict to represent the `ABI` for an event.
+
+.. code-block:: python
+
+    class ABIEvent(TypedDict, total=False)
+
+ABIEventParams
+~~~~~~~~~~~~~~
+
+TypedDict to represent the `ABI` for event parameters.
+
+.. code-block:: python
+
+    class ABIEventParams(TypedDict, total=False)
 
 TypeStr
 ~~~~~~~
