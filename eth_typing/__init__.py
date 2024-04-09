@@ -39,6 +39,7 @@ from .evm import (
     HexAddress,
 )
 from .networks import (
+    URI,
     ChainId,
 )
 
@@ -68,6 +69,7 @@ __all__ = (
     "ChecksumAddress",
     "Hash32",
     "HexAddress",
+    "URI",
 )
 
 __version__ = __version("eth-typing")
