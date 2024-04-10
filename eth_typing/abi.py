@@ -73,25 +73,70 @@ class ABIFunctionParam(TypedDict, total=False):
     """Type of the function parameter."""
 
 
-class ABIFunction(TypedDict, total=False):
+class ABIFunctionType(TypedDict, total=False):
+    """
+    TypedDict representing the `ABI` for all function types.
+
+    This is the base type for functions.
+    Please use ABIFunction, ABIConstructor, ABIFallback or ABIReceive instead.
+    """
+
+    stateMutability: Literal["pure", "view", "nonpayable", "payable"]
+    """State mutability of the constructor."""
+    payable: bool
+    """
+    Contract is payable to receive ether on deployment.
+    Deprecated in favor of stateMutability payable and nonpayable.
+    """
+    constant: bool
+    """
+    Function is constant and does not change state.
+    Deprecated in favor of stateMutability pure and view.
+    """
+
+
+class ABIFunction(ABIFunctionType, total=False):
     """
     TypedDict representing the `ABI` for a function.
     """
 
-    constant: bool
-    """Function is constant and does not change state."""
+    type: Literal["function"]
+    """Type of the function."""
     inputs: Sequence["ABIFunctionParam"]
     """Function input parameters."""
     name: str
     """Name of the function."""
     outputs: Sequence["ABIFunctionParam"]
     """Function return values."""
-    payable: bool
-    """Contract is payable to receive ether on deployment."""
-    stateMutability: Literal["pure", "view", "nonpayable", "payable"]
-    """State mutability of the constructor."""
-    type: Literal["function", "constructor", "fallback", "receive"]
-    """Type of the function."""
+
+
+class ABIConstructor(ABIFunctionType, total=False):
+    """
+    TypedDict representing the `ABI` for a constructor function.
+    """
+
+    type: Literal["constructor"]
+    """Type of the constructor function."""
+    inputs: Sequence["ABIFunctionParam"]
+    """Function input parameters."""
+
+
+class ABIFallback(ABIFunctionType, total=False):
+    """
+    TypedDict representing the `ABI` for a fallback function.
+    """
+
+    type: Literal["fallback"]
+    """Type of the fallback function."""
+
+
+class ABIReceive(ABIFunctionType, total=False):
+    """
+    TypedDict representing the `ABI` for a receive function.
+    """
+
+    type: Literal["receive"]
+    """Type of the receive function."""
 
 
 class ABIFunctionInfo(TypedDict, total=False):
