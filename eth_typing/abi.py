@@ -17,7 +17,7 @@ Decodable = Union[bytes, bytearray]
 """Binary data to be decoded."""
 
 
-class ABIEventParams(TypedDict, total=False):
+class ABIEventParam(TypedDict, total=False):
     """
     TypedDict to represent the `ABI` for event parameters.
     """
@@ -37,7 +37,7 @@ class ABIEvent(TypedDict, total=False):
 
     anonymous: bool
     """If True, event is anonymous. Cannot filter the event by name."""
-    inputs: Sequence["ABIEventParams"]
+    inputs: Sequence["ABIEventParam"]
     """Input parameters for the event."""
     name: str
     """Event name identifier."""
@@ -45,14 +45,14 @@ class ABIEvent(TypedDict, total=False):
     """Event ABI type."""
 
 
-class ABIFunctionComponents(TypedDict, total=False):
+class ABIFunctionComponent(TypedDict, total=False):
     """
     TypedDict representing the `ABI` for nested function parameters.
 
     Used as a component of `ABIFunctionParams`.
     """
 
-    components: Sequence["ABIFunctionComponents"]
+    components: Sequence["ABIFunctionComponent"]
     """List of nested function parameters"""
     name: str
     """Name of the function parameter."""
@@ -60,12 +60,12 @@ class ABIFunctionComponents(TypedDict, total=False):
     """Type of the function parameter."""
 
 
-class ABIFunctionParams(TypedDict, total=False):
+class ABIFunctionParam(TypedDict, total=False):
     """
     TypedDict representing the `ABI` for function parameters.
     """
 
-    components: Sequence["ABIFunctionComponents"]
+    components: Sequence["ABIFunctionComponent"]
     """List of function parameters"""
     name: str
     """Name of the function parameter."""
@@ -80,11 +80,11 @@ class ABIFunction(TypedDict, total=False):
 
     constant: bool
     """Function is constant and does not change state."""
-    inputs: Sequence["ABIFunctionParams"]
+    inputs: Sequence["ABIFunctionParam"]
     """Function input parameters."""
     name: str
     """Name of the function."""
-    outputs: Sequence["ABIFunctionParams"]
+    outputs: Sequence["ABIFunctionParam"]
     """Function return values."""
     payable: bool
     """Contract is payable to receive ether on deployment."""
