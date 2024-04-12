@@ -41,6 +41,10 @@ from .evm import (
     Hash32,
     HexAddress,
 )
+from .exceptions import (
+    MismatchedABI,
+    ValidationError,
+)
 from .networks import (
     URI,
     ChainId,
@@ -76,6 +80,8 @@ __all__ = (
     "Hash32",
     "HexAddress",
     "URI",
+    "ValidationError",
+    "MismatchedABI",
 )
 
 __version__ = __version("eth-typing")
