@@ -9,26 +9,12 @@ i.e.
 
     from eth_typing import TypeStr
 
-ABI
----
+Application Binary Interface
+----------------------------
 
-TypeStr
-~~~~~~~
-
-String representation of a data type.
-
-.. code-block:: python
-
-    TypeStr = str
-
-Decodable
-~~~~~~~~~
-
-Binary data to be decoded.
-
-.. code-block:: python
-
-    Decodable = Union[bytes, bytearray]
+.. automodule:: eth_typing.abi
+    :members:
+    :undoc-members:
 
 Enumerables
 -----------
@@ -67,8 +53,8 @@ The list of chain ids is available from the `ethereum-lists/chains`_ repository.
 
     class ChainId(IntEnum):
         # L1 networks
-    	ETH = 1
-    	EXP = 2
+        ETH = 1
+        EXP = 2
         ROP = 3
         RIN = 4
         GOR = 5

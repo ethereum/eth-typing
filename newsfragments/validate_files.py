@@ -6,6 +6,10 @@
 import pathlib
 import sys
 
+from eth_typing.exceptions import (
+    ValidationError,
+)
+
 ALLOWED_EXTENSIONS = {
     ".breaking.rst",
     ".bugfix.rst",
@@ -36,9 +40,9 @@ for fragment_file in THIS_DIR.iterdir():
     elif num_args == 0:
         full_extension = "".join(fragment_file.suffixes)
         if full_extension not in ALLOWED_EXTENSIONS:
-            raise Exception(f"Unexpected file: {fragment_file}")
+            raise ValidationError(f"Unexpected file: {fragment_file}")
     elif sys.argv[1] == "is-empty":
-        raise Exception(f"Unexpected file: {fragment_file}")
+        raise ValidationError(f"Unexpected file: {fragment_file}")
     else:
         raise RuntimeError(
             f"Strange: arguments {sys.argv} were validated, but not found"

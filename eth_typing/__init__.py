@@ -3,6 +3,17 @@ from importlib.metadata import (
 )
 
 from .abi import (
+    ABI,
+    ABIConstructor,
+    ABIElement,
+    ABIEvent,
+    ABIEventParam,
+    ABIFallback,
+    ABIFunction,
+    ABIFunctionComponent,
+    ABIFunctionInfo,
+    ABIFunctionParam,
+    ABIReceive,
     Decodable,
     TypeStr,
 )
@@ -30,11 +41,27 @@ from .evm import (
     Hash32,
     HexAddress,
 )
+from .exceptions import (
+    MismatchedABI,
+    ValidationError,
+)
 from .networks import (
+    URI,
     ChainId,
 )
 
 __all__ = (
+    "ABI",
+    "ABIConstructor",
+    "ABIElement",
+    "ABIEvent",
+    "ABIEventParam",
+    "ABIFallback",
+    "ABIFunction",
+    "ABIFunctionComponent",
+    "ABIFunctionInfo",
+    "ABIFunctionParam",
+    "ABIReceive",
     "Decodable",
     "TypeStr",
     "BLSPrivateKey",
@@ -52,6 +79,9 @@ __all__ = (
     "ChecksumAddress",
     "Hash32",
     "HexAddress",
+    "URI",
+    "ValidationError",
+    "MismatchedABI",
 )
 
 __version__ = __version("eth-typing")
