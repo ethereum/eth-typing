@@ -1,1 +1,0 @@
-Remove types related to the EthPM module which has been removed from ``web3.py``

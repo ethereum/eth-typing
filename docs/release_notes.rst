@@ -3,6 +3,21 @@ Release Notes
 
 .. towncrier release notes start
 
+eth-typing v4.2.0 (2024-04-15)
+------------------------------
+
+Features
+~~~~~~~~
+
+- Add type definitions to represent contract ``ABI``s. (`#61 <https://github.com/ethereum/eth-typing/issues/61>`__)
+
+
+Removals
+~~~~~~~~
+
+- Remove types related to the EthPM module which has been removed from ``web3.py`` (`#60 <https://github.com/ethereum/eth-typing/issues/60>`__)
+
+
 eth-typing v4.1.0 (2024-04-01)
 ------------------------------
 
