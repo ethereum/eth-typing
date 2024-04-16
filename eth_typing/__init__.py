@@ -51,7 +51,6 @@ from .exceptions import (
     ValidationError,
 )
 from .networks import (
-    URI,
     ChainId,
 )
 
@@ -87,7 +86,6 @@ __all__ = (
     "ChecksumAddress",
     "Hash32",
     "HexAddress",
-    "URI",
     "ValidationError",
     "MismatchedABI",
 )
