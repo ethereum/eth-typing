@@ -1,12 +1,6 @@
 from enum import (
     IntEnum,
 )
-from typing import (
-    NewType,
-)
-
-URI = NewType("URI", str)
-"""Any string that represents a URI."""
 
 
 class ChainId(IntEnum):

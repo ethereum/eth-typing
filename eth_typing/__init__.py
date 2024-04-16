@@ -32,6 +32,11 @@ from .encoding import (
 from .enums import (
     ForkName,
 )
+from .ethpm import (
+    URI,
+    ContractName,
+    Manifest,
+)
 from .evm import (
     Address,
     AnyAddress,
@@ -46,7 +51,6 @@ from .exceptions import (
     ValidationError,
 )
 from .networks import (
-    URI,
     ChainId,
 )
 
@@ -72,6 +76,9 @@ __all__ = (
     "Primitives",
     "ForkName",
     "ChainId",
+    "URI",
+    "ContractName",
+    "Manifest",
     "Address",
     "AnyAddress",
     "BlockIdentifier",
@@ -79,7 +86,6 @@ __all__ = (
     "ChecksumAddress",
     "Hash32",
     "HexAddress",
-    "URI",
     "ValidationError",
     "MismatchedABI",
 )
