@@ -1,1 +1,0 @@
-Put back types used for `EthPM`: `ContractName`, `Manifest`, and `URI`.

@@ -3,6 +3,15 @@ Release Notes
 
 .. towncrier release notes start
 
+eth-typing v4.2.1 (2024-04-16)
+------------------------------
+
+Bugfixes
+~~~~~~~~
+
+- Put back types used for `EthPM`: `ContractName`, `Manifest`, and `URI`. (`#64 <https://github.com/ethereum/eth-typing/issues/64>`__)
+
+
 eth-typing v4.2.0 (2024-04-15)
 ------------------------------
 
