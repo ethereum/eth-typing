@@ -32,6 +32,11 @@ from .encoding import (
 from .enums import (
     ForkName,
 )
+from .ethpm import (
+    URI,
+    ContractName,
+    Manifest,
+)
 from .evm import (
     Address,
     AnyAddress,
@@ -72,6 +77,9 @@ __all__ = (
     "Primitives",
     "ForkName",
     "ChainId",
+    "URI",
+    "ContractName",
+    "Manifest",
     "Address",
     "AnyAddress",
     "BlockIdentifier",
