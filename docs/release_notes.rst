@@ -18,7 +18,7 @@ eth-typing v4.2.0 (2024-04-15)
 Features
 ~~~~~~~~
 
-- Add type definitions to represent contract ``ABI``s. (`#61 <https://github.com/ethereum/eth-typing/issues/61>`__)
+- Add type definitions to represent contract ``ABI`` s. (`#61 <https://github.com/ethereum/eth-typing/issues/61>`__)
 
 
 Removals
