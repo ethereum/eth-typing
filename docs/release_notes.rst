@@ -3,6 +3,27 @@ Release Notes
 
 .. towncrier release notes start
 
+eth-typing v4.2.2 (2024-04-29)
+------------------------------
+
+Bugfixes
+~~~~~~~~
+
+- Fixes types that were incorrectly defined for ``ABI`` utils. (`#62 <https://github.com/ethereum/eth-typing/issues/62>`__)
+
+
+Features
+~~~~~~~~
+
+- Update network type mappings. (`#70 <https://github.com/ethereum/eth-typing/issues/70>`__)
+
+
+Miscellaneous Changes
+~~~~~~~~~~~~~~~~~~~~~
+
+- `#68 <https://github.com/ethereum/eth-typing/issues/68>`__
+
+
 eth-typing v4.2.1 (2024-04-16)
 ------------------------------
 
