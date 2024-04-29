@@ -17,6 +17,21 @@ Decodable = Union[bytes, bytearray]
 """Binary data to be decoded."""
 
 
+class ABIEventComponent(TypedDict, total=False):
+    """
+    TypedDict to represent the `ABI` for nested event parameters.
+
+    Used as a component of `ABIEventParam`.
+    """
+
+    components: Sequence["ABIEventComponent"]
+    """List of nested event parameters for tuple event ABI types."""
+    name: str
+    """Name of the event parameter."""
+    type: str
+    """Type of the event parameter."""
+
+
 class ABIEventParam(TypedDict, total=False):
     """
     TypedDict to represent the `ABI` for event parameters.
@@ -24,6 +39,8 @@ class ABIEventParam(TypedDict, total=False):
 
     indexed: bool
     """If True, event parameter can be used as a topic filter."""
+    components: Sequence["ABIEventComponent"]
+    """List of nested event parameters for tuple event ABI types."""
     name: str
     """Name of the event parameter."""
     type: str
@@ -49,11 +66,11 @@ class ABIFunctionComponent(TypedDict, total=False):
     """
     TypedDict representing the `ABI` for nested function parameters.
 
-    Used as a component of `ABIFunctionParams`.
+    Used as a component of `ABIFunctionParam`.
     """
 
     components: Sequence["ABIFunctionComponent"]
-    """List of nested function parameters"""
+    """List of nested function parameters for tuple function ABI types."""
     name: str
     """Name of the function parameter."""
     type: str
@@ -66,7 +83,7 @@ class ABIFunctionParam(TypedDict, total=False):
     """
 
     components: Sequence["ABIFunctionComponent"]
-    """List of function parameters"""
+    """List of nested function parameters for tuple function ABI types."""
     name: str
     """Name of the function parameter."""
     type: str
@@ -153,9 +170,9 @@ class ABIFunctionInfo(TypedDict, total=False):
     """Function input parameters."""
 
 
-ABIElement = Union[ABIFunction, ABIEvent]
+ABIElement = Union[ABIFunction, ABIConstructor, ABIFallback, ABIReceive, ABIEvent]
 """Base type for `ABIFunction` and `ABIEvent` types."""
-ABI = Sequence[Union[ABIFunction, ABIEvent]]
+ABI = Sequence[ABIElement]
 """
 List of components representing function and event interfaces
 (elements of an ABI).
