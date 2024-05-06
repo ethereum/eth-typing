@@ -3,6 +3,15 @@ Release Notes
 
 .. towncrier release notes start
 
+eth-typing v4.2.3 (2024-05-06)
+------------------------------
+
+Features
+~~~~~~~~
+
+- Update networks types with the latest. (`#72 <https://github.com/ethereum/eth-typing/issues/72>`__)
+
+
 eth-typing v4.2.2 (2024-04-29)
 ------------------------------
 
