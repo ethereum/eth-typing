@@ -170,7 +170,50 @@ class ABIFunctionInfo(TypedDict, total=False):
     """Function input parameters."""
 
 
-ABIElement = Union[ABIFunction, ABIConstructor, ABIFallback, ABIReceive, ABIEvent]
+class ABIErrorComponent(TypedDict, total=False):
+    """
+    TypedDict representing the `ABI` for nested error parameters.
+
+    Used as a component of `ABIErrorParam`.
+    """
+
+    components: Sequence["ABIErrorComponent"]
+    """List of nested error parameters for tuple error ABI types."""
+    name: str
+    """Name of the error parameter."""
+    type: str
+    """Type of the error parameter."""
+
+
+class ABIErrorParam(TypedDict, total=False):
+    """
+    TypedDict representing the `ABI` for error parameters.
+    """
+
+    components: Sequence["ABIErrorComponent"]
+    """List of nested error parameters for tuple error ABI types."""
+    name: str
+    """Name of the error parameter."""
+    type: str
+    """Type of the error parameter."""
+
+
+class ABIError(TypedDict, total=False):
+    """
+    TypedDict representing the `ABI` for an error.
+    """
+
+    type: Literal["error"]
+    """Type of the error."""
+    inputs: Sequence["ABIErrorParam"]
+    """Error input parameters."""
+    name: str
+    """Name of the error."""
+
+
+ABIElement = Union[
+    ABIFunction, ABIConstructor, ABIFallback, ABIReceive, ABIEvent, ABIError
+]
 """Base type for `ABIFunction` and `ABIEvent` types."""
 ABI = Sequence[ABIElement]
 """
