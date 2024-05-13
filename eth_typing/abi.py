@@ -17,21 +17,6 @@ Decodable = Union[bytes, bytearray]
 """Binary data to be decoded."""
 
 
-class ABIEventComponent(TypedDict, total=False):
-    """
-    TypedDict to represent the `ABI` for nested event parameters.
-
-    Used as a component of `ABIEventParam`.
-    """
-
-    components: Sequence["ABIEventComponent"]
-    """List of nested event parameters for tuple event ABI types."""
-    name: str
-    """Name of the event parameter."""
-    type: str
-    """Type of the event parameter."""
-
-
 class ABIEventParam(TypedDict, total=False):
     """
     TypedDict to represent the `ABI` for event parameters.
@@ -39,7 +24,7 @@ class ABIEventParam(TypedDict, total=False):
 
     indexed: bool
     """If True, event parameter can be used as a topic filter."""
-    components: Sequence["ABIEventComponent"]
+    components: Sequence["ABIEventParam"]
     """List of nested event parameters for tuple event ABI types."""
     name: str
     """Name of the event parameter."""
@@ -62,27 +47,12 @@ class ABIEvent(TypedDict, total=False):
     """Event ABI type."""
 
 
-class ABIFunctionComponent(TypedDict, total=False):
-    """
-    TypedDict representing the `ABI` for nested function parameters.
-
-    Used as a component of `ABIFunctionParam`.
-    """
-
-    components: Sequence["ABIFunctionComponent"]
-    """List of nested function parameters for tuple function ABI types."""
-    name: str
-    """Name of the function parameter."""
-    type: str
-    """Type of the function parameter."""
-
-
 class ABIFunctionParam(TypedDict, total=False):
     """
     TypedDict representing the `ABI` for function parameters.
     """
 
-    components: Sequence["ABIFunctionComponent"]
+    components: Sequence["ABIFunctionParam"]
     """List of nested function parameters for tuple function ABI types."""
     name: str
     """Name of the function parameter."""
@@ -170,27 +140,12 @@ class ABIFunctionInfo(TypedDict, total=False):
     """Function input parameters."""
 
 
-class ABIErrorComponent(TypedDict, total=False):
-    """
-    TypedDict representing the `ABI` for nested error parameters.
-
-    Used as a component of `ABIErrorParam`.
-    """
-
-    components: Sequence["ABIErrorComponent"]
-    """List of nested error parameters for tuple error ABI types."""
-    name: str
-    """Name of the error parameter."""
-    type: str
-    """Type of the error parameter."""
-
-
 class ABIErrorParam(TypedDict, total=False):
     """
     TypedDict representing the `ABI` for error parameters.
     """
 
-    components: Sequence["ABIErrorComponent"]
+    components: Sequence["ABIErrorParam"]
     """List of nested error parameters for tuple error ABI types."""
     name: str
     """Name of the error parameter."""
