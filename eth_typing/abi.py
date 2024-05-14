@@ -17,34 +17,17 @@ Decodable = Union[bytes, bytearray]
 """Binary data to be decoded."""
 
 
-class ABIEventComponent(TypedDict, total=False):
+class ABIComponent(TypedDict, total=False):
     """
-    TypedDict to represent the `ABI` for nested event parameters.
-
-    Used as a component of `ABIEventParam`.
+    TypedDict representing an `ABIElement` component.
     """
 
-    components: Sequence["ABIEventComponent"]
-    """List of nested event parameters for tuple event ABI types."""
+    components: Sequence["ABIComponent"]
+    """List of nested `ABI` components for ABI types."""
     name: str
-    """Name of the event parameter."""
+    """Name of the component."""
     type: str
-    """Type of the event parameter."""
-
-
-class ABIEventParam(TypedDict, total=False):
-    """
-    TypedDict to represent the `ABI` for event parameters.
-    """
-
-    indexed: bool
-    """If True, event parameter can be used as a topic filter."""
-    components: Sequence["ABIEventComponent"]
-    """List of nested event parameters for tuple event ABI types."""
-    name: str
-    """Name of the event parameter."""
-    type: str
-    """Type of the event parameter."""
+    """Type of the component."""
 
 
 class ABIEvent(TypedDict, total=False):
@@ -54,40 +37,12 @@ class ABIEvent(TypedDict, total=False):
 
     anonymous: bool
     """If True, event is anonymous. Cannot filter the event by name."""
-    inputs: Sequence["ABIEventParam"]
-    """Input parameters for the event."""
+    inputs: Sequence["ABIComponent"]
+    """Input components for the event."""
     name: str
     """Event name identifier."""
     type: Literal["event"]
     """Event ABI type."""
-
-
-class ABIFunctionComponent(TypedDict, total=False):
-    """
-    TypedDict representing the `ABI` for nested function parameters.
-
-    Used as a component of `ABIFunctionParam`.
-    """
-
-    components: Sequence["ABIFunctionComponent"]
-    """List of nested function parameters for tuple function ABI types."""
-    name: str
-    """Name of the function parameter."""
-    type: str
-    """Type of the function parameter."""
-
-
-class ABIFunctionParam(TypedDict, total=False):
-    """
-    TypedDict representing the `ABI` for function parameters.
-    """
-
-    components: Sequence["ABIFunctionComponent"]
-    """List of nested function parameters for tuple function ABI types."""
-    name: str
-    """Name of the function parameter."""
-    type: str
-    """Type of the function parameter."""
 
 
 class ABIFunctionType(TypedDict, total=False):
@@ -119,12 +74,12 @@ class ABIFunction(ABIFunctionType, total=False):
 
     type: Literal["function"]
     """Type of the function."""
-    inputs: Sequence["ABIFunctionParam"]
-    """Function input parameters."""
+    inputs: Sequence["ABIComponent"]
+    """Function input components."""
     name: str
     """Name of the function."""
-    outputs: Sequence["ABIFunctionParam"]
-    """Function return values."""
+    outputs: Sequence["ABIComponent"]
+    """Function output components."""
 
 
 class ABIConstructor(ABIFunctionType, total=False):
@@ -134,8 +89,8 @@ class ABIConstructor(ABIFunctionType, total=False):
 
     type: Literal["constructor"]
     """Type of the constructor function."""
-    inputs: Sequence["ABIFunctionParam"]
-    """Function input parameters."""
+    inputs: Sequence["ABIComponent"]
+    """Function input components."""
 
 
 class ABIFallback(ABIFunctionType, total=False):
@@ -167,10 +122,25 @@ class ABIFunctionInfo(TypedDict, total=False):
     selector: HexStr
     """Solidity Function selector sighash."""
     arguments: Tuple[Any, ...]
-    """Function input parameters."""
+    """Function input components."""
 
 
-ABIElement = Union[ABIFunction, ABIConstructor, ABIFallback, ABIReceive, ABIEvent]
+class ABIError(TypedDict, total=False):
+    """
+    TypedDict representing the `ABI` for an error.
+    """
+
+    type: Literal["error"]
+    """Type of the error."""
+    inputs: Sequence["ABIComponent"]
+    """Error input components."""
+    name: str
+    """Name of the error."""
+
+
+ABIElement = Union[
+    ABIFunction, ABIConstructor, ABIFallback, ABIReceive, ABIEvent, ABIError
+]
 """Base type for `ABIFunction` and `ABIEvent` types."""
 ABI = Sequence[ABIElement]
 """
