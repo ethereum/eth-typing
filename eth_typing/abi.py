@@ -17,6 +17,39 @@ Decodable = Union[bytes, bytearray]
 """Binary data to be decoded."""
 
 
+class ABIEventComponent(TypedDict, total=False):
+    """
+    DEPRECATED: Use `ABIComponent`.
+
+    TypedDict to represent the `ABI` for nested event parameters.
+    Used as a component of `ABIEventParam`.
+    """
+
+    components: Sequence["ABIEventComponent"]
+    """List of nested event parameters for tuple event ABI types."""
+    name: str
+    """Name of the event parameter."""
+    type: str
+    """Type of the event parameter."""
+
+
+class ABIEventParam(TypedDict, total=False):
+    """
+    DEPRECATED: Use `ABIComponent`.
+
+    TypedDict to represent the `ABI` for event parameters.
+    """
+
+    indexed: bool
+    """If True, event parameter can be used as a topic filter."""
+    components: Sequence["ABIEventComponent"]
+    """List of nested event parameters for tuple event ABI types."""
+    name: str
+    """Name of the event parameter."""
+    type: str
+    """Type of the event parameter."""
+
+
 class ABIComponent(TypedDict, total=False):
     """
     TypedDict representing an `ABIElement` component.
@@ -43,6 +76,37 @@ class ABIEvent(TypedDict, total=False):
     """Event name identifier."""
     type: Literal["event"]
     """Event ABI type."""
+
+
+class ABIFunctionComponent(TypedDict, total=False):
+    """
+    DEPRECATED: Use `ABIComponent`.
+
+    TypedDict representing the `ABI` for nested function parameters.
+    Used as a component of `ABIFunctionParam`.
+    """
+
+    components: Sequence["ABIFunctionComponent"]
+    """List of nested function parameters for tuple function ABI types."""
+    name: str
+    """Name of the function parameter."""
+    type: str
+    """Type of the function parameter."""
+
+
+class ABIFunctionParam(TypedDict, total=False):
+    """
+    DEPRECATED: Use `ABIComponent`.
+
+    TypedDict representing the `ABI` for function parameters.
+    """
+
+    components: Sequence["ABIFunctionComponent"]
+    """List of nested function parameters for tuple function ABI types."""
+    name: str
+    """Name of the function parameter."""
+    type: str
+    """Type of the function parameter."""
 
 
 class ABIFunctionType(TypedDict, total=False):
