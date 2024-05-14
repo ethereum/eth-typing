@@ -17,19 +17,17 @@ Decodable = Union[bytes, bytearray]
 """Binary data to be decoded."""
 
 
-class ABIEventParam(TypedDict, total=False):
+class ABIParam(TypedDict, total=False):
     """
-    TypedDict to represent the `ABI` for event parameters.
+    TypedDict representing the `ABI` for error parameters.
     """
 
-    indexed: bool
-    """If True, event parameter can be used as a topic filter."""
-    components: Sequence["ABIEventParam"]
-    """List of nested event parameters for tuple event ABI types."""
+    components: Sequence["ABIParam"]
+    """List of nested parameters for tuple error ABI types."""
     name: str
-    """Name of the event parameter."""
+    """Name of the parameter."""
     type: str
-    """Type of the event parameter."""
+    """Type of the parameter."""
 
 
 class ABIEvent(TypedDict, total=False):
@@ -39,25 +37,12 @@ class ABIEvent(TypedDict, total=False):
 
     anonymous: bool
     """If True, event is anonymous. Cannot filter the event by name."""
-    inputs: Sequence["ABIEventParam"]
+    inputs: Sequence["ABIParam"]
     """Input parameters for the event."""
     name: str
     """Event name identifier."""
     type: Literal["event"]
     """Event ABI type."""
-
-
-class ABIFunctionParam(TypedDict, total=False):
-    """
-    TypedDict representing the `ABI` for function parameters.
-    """
-
-    components: Sequence["ABIFunctionParam"]
-    """List of nested function parameters for tuple function ABI types."""
-    name: str
-    """Name of the function parameter."""
-    type: str
-    """Type of the function parameter."""
 
 
 class ABIFunctionType(TypedDict, total=False):
@@ -89,11 +74,11 @@ class ABIFunction(ABIFunctionType, total=False):
 
     type: Literal["function"]
     """Type of the function."""
-    inputs: Sequence["ABIFunctionParam"]
+    inputs: Sequence["ABIParam"]
     """Function input parameters."""
     name: str
     """Name of the function."""
-    outputs: Sequence["ABIFunctionParam"]
+    outputs: Sequence["ABIParam"]
     """Function return values."""
 
 
@@ -104,7 +89,7 @@ class ABIConstructor(ABIFunctionType, total=False):
 
     type: Literal["constructor"]
     """Type of the constructor function."""
-    inputs: Sequence["ABIFunctionParam"]
+    inputs: Sequence["ABIParam"]
     """Function input parameters."""
 
 
@@ -140,19 +125,6 @@ class ABIFunctionInfo(TypedDict, total=False):
     """Function input parameters."""
 
 
-class ABIErrorParam(TypedDict, total=False):
-    """
-    TypedDict representing the `ABI` for error parameters.
-    """
-
-    components: Sequence["ABIErrorParam"]
-    """List of nested error parameters for tuple error ABI types."""
-    name: str
-    """Name of the error parameter."""
-    type: str
-    """Type of the error parameter."""
-
-
 class ABIError(TypedDict, total=False):
     """
     TypedDict representing the `ABI` for an error.
@@ -160,7 +132,7 @@ class ABIError(TypedDict, total=False):
 
     type: Literal["error"]
     """Type of the error."""
-    inputs: Sequence["ABIErrorParam"]
+    inputs: Sequence["ABIParam"]
     """Error input parameters."""
     name: str
     """Name of the error."""
