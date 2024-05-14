@@ -4,6 +4,7 @@ from importlib.metadata import (
 
 from .abi import (
     ABI,
+    ABIComponent,
     ABIConstructor,
     ABIElement,
     ABIError,
@@ -12,7 +13,6 @@ from .abi import (
     ABIFunction,
     ABIFunctionInfo,
     ABIFunctionType,
-    ABIParam,
     ABIReceive,
     Decodable,
     TypeStr,
@@ -56,6 +56,7 @@ from .networks import (
 
 __all__ = (
     "ABI",
+    "ABIComponent",
     "ABIConstructor",
     "ABIElement",
     "ABIError",
@@ -64,7 +65,6 @@ __all__ = (
     "ABIFunction",
     "ABIFunctionInfo",
     "ABIFunctionType",
-    "ABIParam",
     "ABIReceive",
     "Decodable",
     "TypeStr",

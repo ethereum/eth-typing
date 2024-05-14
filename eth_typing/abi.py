@@ -17,17 +17,17 @@ Decodable = Union[bytes, bytearray]
 """Binary data to be decoded."""
 
 
-class ABIParam(TypedDict, total=False):
+class ABIComponent(TypedDict, total=False):
     """
-    TypedDict representing the `ABI` for error parameters.
+    TypedDict representing an `ABIElement` component.
     """
 
-    components: Sequence["ABIParam"]
-    """List of nested parameters for tuple error ABI types."""
+    components: Sequence["ABIComponent"]
+    """List of nested `ABI` components for ABI types."""
     name: str
-    """Name of the parameter."""
+    """Name of the component."""
     type: str
-    """Type of the parameter."""
+    """Type of the component."""
 
 
 class ABIEvent(TypedDict, total=False):
@@ -37,8 +37,8 @@ class ABIEvent(TypedDict, total=False):
 
     anonymous: bool
     """If True, event is anonymous. Cannot filter the event by name."""
-    inputs: Sequence["ABIParam"]
-    """Input parameters for the event."""
+    inputs: Sequence["ABIComponent"]
+    """Input components for the event."""
     name: str
     """Event name identifier."""
     type: Literal["event"]
@@ -74,12 +74,12 @@ class ABIFunction(ABIFunctionType, total=False):
 
     type: Literal["function"]
     """Type of the function."""
-    inputs: Sequence["ABIParam"]
-    """Function input parameters."""
+    inputs: Sequence["ABIComponent"]
+    """Function input components."""
     name: str
     """Name of the function."""
-    outputs: Sequence["ABIParam"]
-    """Function return values."""
+    outputs: Sequence["ABIComponent"]
+    """Function output components."""
 
 
 class ABIConstructor(ABIFunctionType, total=False):
@@ -89,8 +89,8 @@ class ABIConstructor(ABIFunctionType, total=False):
 
     type: Literal["constructor"]
     """Type of the constructor function."""
-    inputs: Sequence["ABIParam"]
-    """Function input parameters."""
+    inputs: Sequence["ABIComponent"]
+    """Function input components."""
 
 
 class ABIFallback(ABIFunctionType, total=False):
@@ -122,7 +122,7 @@ class ABIFunctionInfo(TypedDict, total=False):
     selector: HexStr
     """Solidity Function selector sighash."""
     arguments: Tuple[Any, ...]
-    """Function input parameters."""
+    """Function input components."""
 
 
 class ABIError(TypedDict, total=False):
@@ -132,8 +132,8 @@ class ABIError(TypedDict, total=False):
 
     type: Literal["error"]
     """Type of the error."""
-    inputs: Sequence["ABIParam"]
-    """Error input parameters."""
+    inputs: Sequence["ABIComponent"]
+    """Error input components."""
     name: str
     """Name of the error."""
 
