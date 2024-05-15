@@ -50,7 +50,7 @@ class ABIEventParam(TypedDict, total=False):
     """Type of the event parameter."""
 
 
-class ABIComponent(TypedDict, total=False):
+class ABIComponent(TypedDict):
     """
     TypedDict representing an `ABIElement` component.
     """
@@ -61,6 +61,15 @@ class ABIComponent(TypedDict, total=False):
     """Name of the component."""
     type: str
     """Type of the component."""
+
+
+class ABIComponentIndexed(ABIComponent):
+    """
+    TypedDict representing an indexed `ABIElement` component.
+    """
+
+    indexed: bool
+    """If True, component can be used as a topic filter."""
 
 
 class ABIEvent(TypedDict, total=False):
