@@ -45,7 +45,9 @@ setup(
     author_email="snakecharmers@ethereum.org",
     url="https://github.com/ethereum/eth-typing",
     include_package_data=True,
-    install_requires=[],
+    install_requires=[
+        "typing_extensions>=4.0.0",
+    ],
     python_requires=">=3.8, <4",
     extras_require=extras_require,
     py_modules=["eth_typing"],

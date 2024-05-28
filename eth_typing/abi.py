@@ -7,6 +7,10 @@ from typing import (
     Union,
 )
 
+from typing_extensions import (
+    deprecated,
+)
+
 from eth_typing.encoding import (
     HexStr,
 )
@@ -16,11 +20,12 @@ TypeStr = str
 Decodable = Union[bytes, bytearray]
 """Binary data to be decoded."""
 
+ABI_COMPONENT_DEPRECATION_MSG = "`{0}` is deprecated, use `ABIComponent` instead."
 
+
+@deprecated(ABI_COMPONENT_DEPRECATION_MSG.format("ABIEventComponent"))
 class ABIEventComponent(TypedDict, total=False):
     """
-    DEPRECATED: Use `ABIComponent`.
-
     TypedDict to represent the `ABI` for nested event parameters.
     Used as a component of `ABIEventParam`.
     """
@@ -33,10 +38,9 @@ class ABIEventComponent(TypedDict, total=False):
     """Type of the event parameter."""
 
 
+@deprecated(ABI_COMPONENT_DEPRECATION_MSG.format("ABIEventParam"))
 class ABIEventParam(TypedDict, total=False):
     """
-    DEPRECATED: Use `ABIComponent`.
-
     TypedDict to represent the `ABI` for event parameters.
     """
 
@@ -87,10 +91,9 @@ class ABIEvent(TypedDict, total=False):
     """Event ABI type."""
 
 
+@deprecated(ABI_COMPONENT_DEPRECATION_MSG.format("ABIFunctionComponent"))
 class ABIFunctionComponent(TypedDict, total=False):
     """
-    DEPRECATED: Use `ABIComponent`.
-
     TypedDict representing the `ABI` for nested function parameters.
     Used as a component of `ABIFunctionParam`.
     """
@@ -103,10 +106,9 @@ class ABIFunctionComponent(TypedDict, total=False):
     """Type of the function parameter."""
 
 
+@deprecated(ABI_COMPONENT_DEPRECATION_MSG.format("ABIFunctionParam"))
 class ABIFunctionParam(TypedDict, total=False):
     """
-    DEPRECATED: Use `ABIComponent`.
-
     TypedDict representing the `ABI` for function parameters.
     """
 
