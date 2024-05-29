@@ -5,6 +5,7 @@ from importlib.metadata import (
 from .abi import (
     ABI,
     ABIComponent,
+    ABIComponentIndexed,
     ABIConstructor,
     ABIElement,
     ABIError,
@@ -61,6 +62,7 @@ from .networks import (
 __all__ = (
     "ABI",
     "ABIComponent",
+    "ABIComponentIndexed",
     "ABIConstructor",
     "ABIElement",
     "ABIError",
