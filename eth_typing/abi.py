@@ -7,6 +7,10 @@ from typing import (
     Union,
 )
 
+from typing_extensions import (
+    deprecated,
+)
+
 from eth_typing.encoding import (
     HexStr,
 )
@@ -16,8 +20,41 @@ TypeStr = str
 Decodable = Union[bytes, bytearray]
 """Binary data to be decoded."""
 
+ABI_COMPONENT_DEPRECATION_MSG = "`{0}` is deprecated, use `ABIComponent` instead."
 
-class ABIComponent(TypedDict, total=False):
+
+@deprecated(ABI_COMPONENT_DEPRECATION_MSG.format("ABIEventComponent"))
+class ABIEventComponent(TypedDict, total=False):
+    """
+    TypedDict to represent the `ABI` for nested event parameters.
+    Used as a component of `ABIEventParam`.
+    """
+
+    components: Sequence["ABIEventComponent"]
+    """List of nested event parameters for tuple event ABI types."""
+    name: str
+    """Name of the event parameter."""
+    type: str
+    """Type of the event parameter."""
+
+
+@deprecated(ABI_COMPONENT_DEPRECATION_MSG.format("ABIEventParam"))
+class ABIEventParam(TypedDict, total=False):
+    """
+    TypedDict to represent the `ABI` for event parameters.
+    """
+
+    indexed: bool
+    """If True, event parameter can be used as a topic filter."""
+    components: Sequence["ABIEventComponent"]
+    """List of nested event parameters for tuple event ABI types."""
+    name: str
+    """Name of the event parameter."""
+    type: str
+    """Type of the event parameter."""
+
+
+class ABIComponent(TypedDict):
     """
     TypedDict representing an `ABIElement` component.
     """
@@ -28,6 +65,15 @@ class ABIComponent(TypedDict, total=False):
     """Name of the component."""
     type: str
     """Type of the component."""
+
+
+class ABIComponentIndexed(ABIComponent):
+    """
+    TypedDict representing an indexed `ABIElement` component.
+    """
+
+    indexed: bool
+    """If True, component can be used as a topic filter."""
 
 
 class ABIEvent(TypedDict, total=False):
@@ -43,6 +89,35 @@ class ABIEvent(TypedDict, total=False):
     """Event name identifier."""
     type: Literal["event"]
     """Event ABI type."""
+
+
+@deprecated(ABI_COMPONENT_DEPRECATION_MSG.format("ABIFunctionComponent"))
+class ABIFunctionComponent(TypedDict, total=False):
+    """
+    TypedDict representing the `ABI` for nested function parameters.
+    Used as a component of `ABIFunctionParam`.
+    """
+
+    components: Sequence["ABIFunctionComponent"]
+    """List of nested function parameters for tuple function ABI types."""
+    name: str
+    """Name of the function parameter."""
+    type: str
+    """Type of the function parameter."""
+
+
+@deprecated(ABI_COMPONENT_DEPRECATION_MSG.format("ABIFunctionParam"))
+class ABIFunctionParam(TypedDict, total=False):
+    """
+    TypedDict representing the `ABI` for function parameters.
+    """
+
+    components: Sequence["ABIFunctionComponent"]
+    """List of nested function parameters for tuple function ABI types."""
+    name: str
+    """Name of the function parameter."""
+    type: str
+    """Type of the function parameter."""
 
 
 class ABIFunctionType(TypedDict, total=False):
