@@ -79,6 +79,8 @@ A 32-byte identifier for a node in the Discovery DHT
 EthPM
 -----
 
+DEPRECATED: The `eth_typing.EthPM` module is deprecated and will be removed in a future release.
+
 ContractName
 ~~~~~~~~~~~~
 
