@@ -8,6 +8,7 @@ from typing import (
 )
 
 from typing_extensions import (
+    NotRequired,
     deprecated,
 )
 
@@ -59,12 +60,12 @@ class ABIComponent(TypedDict):
     TypedDict representing an `ABIElement` component.
     """
 
-    components: Sequence["ABIComponent"]
-    """List of nested `ABI` components for ABI types."""
     name: str
     """Name of the component."""
     type: str
     """Type of the component."""
+    components: NotRequired[Sequence["ABIComponent"]]
+    """List of nested `ABI` components for ABI types."""
 
 
 class ABIComponentIndexed(ABIComponent):
@@ -76,19 +77,19 @@ class ABIComponentIndexed(ABIComponent):
     """If True, component can be used as a topic filter."""
 
 
-class ABIEvent(TypedDict, total=False):
+class ABIEvent(TypedDict):
     """
     TypedDict to represent the `ABI` for an event.
     """
 
-    anonymous: bool
-    """If True, event is anonymous. Cannot filter the event by name."""
-    inputs: Sequence["ABIComponent"]
-    """Input components for the event."""
     name: str
     """Event name identifier."""
     type: Literal["event"]
     """Event ABI type."""
+    anonymous: NotRequired[bool]
+    """If True, event is anonymous. Cannot filter the event by name."""
+    inputs: NotRequired[Sequence["ABIComponent"]]
+    """Input components for the event."""
 
 
 @deprecated(ABI_COMPONENT_DEPRECATION_MSG.format("ABIFunctionComponent"))
@@ -142,33 +143,33 @@ class ABIFunctionType(TypedDict, total=False):
     """
 
 
-class ABIFunction(ABIFunctionType, total=False):
+class ABIFunction(ABIFunctionType):
     """
     TypedDict representing the `ABI` for a function.
     """
 
     type: Literal["function"]
     """Type of the function."""
-    inputs: Sequence["ABIComponent"]
-    """Function input components."""
     name: str
     """Name of the function."""
-    outputs: Sequence["ABIComponent"]
+    inputs: NotRequired[Sequence["ABIComponent"]]
+    """Function input components."""
+    outputs: NotRequired[Sequence["ABIComponent"]]
     """Function output components."""
 
 
-class ABIConstructor(ABIFunctionType, total=False):
+class ABIConstructor(ABIFunctionType):
     """
     TypedDict representing the `ABI` for a constructor function.
     """
 
     type: Literal["constructor"]
     """Type of the constructor function."""
-    inputs: Sequence["ABIComponent"]
+    inputs: NotRequired[Sequence["ABIComponent"]]
     """Function input components."""
 
 
-class ABIFallback(ABIFunctionType, total=False):
+class ABIFallback(ABIFunctionType):
     """
     TypedDict representing the `ABI` for a fallback function.
     """
@@ -177,7 +178,7 @@ class ABIFallback(ABIFunctionType, total=False):
     """Type of the fallback function."""
 
 
-class ABIReceive(ABIFunctionType, total=False):
+class ABIReceive(ABIFunctionType):
     """
     TypedDict representing the `ABI` for a receive function.
     """
@@ -186,7 +187,7 @@ class ABIReceive(ABIFunctionType, total=False):
     """Type of the receive function."""
 
 
-class ABIFunctionInfo(TypedDict, total=False):
+class ABIFunctionInfo(TypedDict):
     """
     TypedDict to represent an `ABIFunction` with the function selector and
     corresponding arguments.
@@ -200,17 +201,17 @@ class ABIFunctionInfo(TypedDict, total=False):
     """Function input components."""
 
 
-class ABIError(TypedDict, total=False):
+class ABIError(TypedDict):
     """
     TypedDict representing the `ABI` for an error.
     """
 
     type: Literal["error"]
     """Type of the error."""
-    inputs: Sequence["ABIComponent"]
-    """Error input components."""
     name: str
     """Name of the error."""
+    inputs: NotRequired[Sequence["ABIComponent"]]
+    """Error input components."""
 
 
 ABIElement = Union[
