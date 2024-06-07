@@ -187,20 +187,6 @@ class ABIReceive(ABIFunctionType):
     """Type of the receive function."""
 
 
-class ABIFunctionInfo(TypedDict):
-    """
-    TypedDict to represent an `ABIFunction` with the function selector and
-    corresponding arguments.
-    """
-
-    abi: ABIFunction
-    """ABI for the function interface."""
-    selector: HexStr
-    """Solidity Function selector sighash."""
-    arguments: Tuple[Any, ...]
-    """Function input components."""
-
-
 class ABIError(TypedDict):
     """
     TypedDict representing the `ABI` for an error.
@@ -214,9 +200,24 @@ class ABIError(TypedDict):
     """Error input components."""
 
 
-ABIElement = Union[
-    ABIFunction, ABIConstructor, ABIFallback, ABIReceive, ABIEvent, ABIError
-]
+ABICallable = Union[ABIFunction, ABIConstructor, ABIFallback, ABIReceive]
+
+
+class ABIFunctionInfo(TypedDict):
+    """
+    TypedDict to represent properties of an `ABIFunction`, including the function
+    selector and arguments.
+    """
+
+    abi: ABICallable
+    """ABI for the function interface."""
+    selector: HexStr
+    """Solidity Function selector sighash."""
+    arguments: Tuple[Any, ...]
+    """Function input components."""
+
+
+ABIElement = Union[ABICallable, ABIEvent, ABIError]
 """Base type for `ABIFunction` and `ABIEvent` types."""
 ABI = Sequence[ABIElement]
 """

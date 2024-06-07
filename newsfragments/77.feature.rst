@@ -1,0 +1,1 @@
+Added ``ABIError``, ``ABIFallback`` and ``ABIReceive`` types to ``ABIFunctionInfo.abi`` types. ``ABICallable`` is now a type alias for ``Union[ABIFunctionInfo, ABIError, ABIFallback, ABIReceive]``.
