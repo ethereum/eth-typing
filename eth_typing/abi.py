@@ -8,7 +8,6 @@ from typing import (
 )
 
 from typing_extensions import (
-    NotRequired,
     deprecated,
 )
 
@@ -55,7 +54,7 @@ class ABIEventParam(TypedDict, total=False):
     """Type of the event parameter."""
 
 
-class ABIComponent(TypedDict):
+class ABIComponent(TypedDict, total=False):
     """
     TypedDict representing an `ABIElement` component.
     """
@@ -64,7 +63,7 @@ class ABIComponent(TypedDict):
     """Name of the component."""
     type: str
     """Type of the component."""
-    components: NotRequired[Sequence["ABIComponent"]]
+    components: Sequence["ABIComponent"]
     """List of nested `ABI` components for ABI types."""
 
 
@@ -77,7 +76,7 @@ class ABIComponentIndexed(ABIComponent):
     """If True, component can be used as a topic filter."""
 
 
-class ABIEvent(TypedDict):
+class ABIEvent(TypedDict, total=False):
     """
     TypedDict to represent the `ABI` for an event.
     """
@@ -86,9 +85,9 @@ class ABIEvent(TypedDict):
     """Event name identifier."""
     type: Literal["event"]
     """Event ABI type."""
-    anonymous: NotRequired[bool]
+    anonymous: bool
     """If True, event is anonymous. Cannot filter the event by name."""
-    inputs: NotRequired[Sequence["ABIComponent"]]
+    inputs: Sequence["ABIComponent"]
     """Input components for the event."""
 
 
@@ -143,7 +142,7 @@ class ABIFunctionType(TypedDict, total=False):
     """
 
 
-class ABIFunction(ABIFunctionType):
+class ABIFunction(ABIFunctionType, total=False):
     """
     TypedDict representing the `ABI` for a function.
     """
@@ -152,24 +151,24 @@ class ABIFunction(ABIFunctionType):
     """Type of the function."""
     name: str
     """Name of the function."""
-    inputs: NotRequired[Sequence["ABIComponent"]]
+    inputs: Sequence["ABIComponent"]
     """Function input components."""
-    outputs: NotRequired[Sequence["ABIComponent"]]
+    outputs: Sequence["ABIComponent"]
     """Function output components."""
 
 
-class ABIConstructor(ABIFunctionType):
+class ABIConstructor(ABIFunctionType, total=False):
     """
     TypedDict representing the `ABI` for a constructor function.
     """
 
     type: Literal["constructor"]
     """Type of the constructor function."""
-    inputs: NotRequired[Sequence["ABIComponent"]]
+    inputs: Sequence["ABIComponent"]
     """Function input components."""
 
 
-class ABIFallback(ABIFunctionType):
+class ABIFallback(ABIFunctionType, total=False):
     """
     TypedDict representing the `ABI` for a fallback function.
     """
@@ -178,7 +177,7 @@ class ABIFallback(ABIFunctionType):
     """Type of the fallback function."""
 
 
-class ABIReceive(ABIFunctionType):
+class ABIReceive(ABIFunctionType, total=False):
     """
     TypedDict representing the `ABI` for a receive function.
     """
@@ -187,7 +186,7 @@ class ABIReceive(ABIFunctionType):
     """Type of the receive function."""
 
 
-class ABIError(TypedDict):
+class ABIError(TypedDict, total=False):
     """
     TypedDict representing the `ABI` for an error.
     """
@@ -196,14 +195,14 @@ class ABIError(TypedDict):
     """Type of the error."""
     name: str
     """Name of the error."""
-    inputs: NotRequired[Sequence["ABIComponent"]]
+    inputs: Sequence["ABIComponent"]
     """Error input components."""
 
 
 ABICallable = Union[ABIFunction, ABIConstructor, ABIFallback, ABIReceive]
 
 
-class ABIFunctionInfo(TypedDict):
+class ABIFunctionInfo(TypedDict, total=False):
     """
     TypedDict to represent properties of an `ABIFunction`, including the function
     selector and arguments.
