@@ -3,6 +3,24 @@ Release Notes
 
 .. towncrier release notes start
 
+eth-typing v4.3.0 (2024-06-10)
+------------------------------
+
+Deprecations
+~~~~~~~~~~~~
+
+- Mark ``EthPM`` types as deprecated in the docs. (`#67 <https://github.com/ethereum/eth-typing/issues/67>`__)
+- Deprecated ``ABIEventComponent``, ``ABIEventParam``, ``ABIFunctionComponent`` and ``ABIFunctionParam`` for removal in v5. (`#74 <https://github.com/ethereum/eth-typing/issues/74>`__)
+
+
+Features
+~~~~~~~~
+
+- Add ``ABIError`` TypedDict for ``ABI`` error messages and ``ABIComponent`` TypedDict for ``ABI`` type components. (`#73 <https://github.com/ethereum/eth-typing/issues/73>`__)
+- ``ABIComponentIndexed`` now extends ``ABIComponent`` to support the ``indexed`` property. (`#74 <https://github.com/ethereum/eth-typing/issues/74>`__)
+- Added ``ABIError``, ``ABIFallback`` and ``ABIReceive`` types to ``ABIFunctionInfo.abi`` types. ``ABICallable`` is now a type alias for ``Union[ABIFunctionInfo, ABIError, ABIFallback, ABIReceive]``. (`#77 <https://github.com/ethereum/eth-typing/issues/77>`__)
+
+
 eth-typing v4.2.3 (2024-05-06)
 ------------------------------
 

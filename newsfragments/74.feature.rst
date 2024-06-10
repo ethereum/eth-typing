@@ -1,1 +1,0 @@
-``ABIComponentIndexed`` now extends ``ABIComponent`` to support the ``indexed`` property.

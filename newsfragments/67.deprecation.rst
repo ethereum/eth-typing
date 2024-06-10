@@ -1,1 +1,0 @@
-Mark ``EthPM`` types as deprecated in the docs.

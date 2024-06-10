@@ -1,1 +1,0 @@
-Deprecated ``ABIEventComponent``, ``ABIEventParam``, ``ABIFunctionComponent`` and ``ABIFunctionParam`` for removal in v5.
