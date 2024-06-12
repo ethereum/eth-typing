@@ -30,17 +30,17 @@ Discovery
     :members:
     :undoc-members:
 
-Enumerables
------------
+Encoding
+--------
 
-.. automodule:: eth_typing.enums
+.. automodule:: eth_typing.encoding
     :members:
     :undoc-members:
 
-EthPM
+Enums
 -----
 
-.. automodule:: eth_typing.ethpm
+.. automodule:: eth_typing.enums
     :members:
     :undoc-members:
 
@@ -57,6 +57,7 @@ Exceptions
 .. automodule:: eth_typing.exceptions
     :members:
     :undoc-members:
+
 
 Networks
 --------

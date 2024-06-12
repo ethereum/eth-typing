@@ -1,4 +1,19 @@
+"""
+Fork names for Ethereum network upgrades.
+"""
+
+
 class ForkName:
+    """
+    Constants for each fork name.
+
+    .. doctest::
+
+        >>> from eth_typing import ForkName
+        >>> ForkName.Frontier
+        'Frontier'
+    """
+
     Frontier = "Frontier"
     Homestead = "Homestead"
     EIP150 = "EIP150"

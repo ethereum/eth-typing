@@ -1,3 +1,7 @@
+"""
+Types for Contract ABIs and related components.
+"""
+
 from typing import (
     Any,
     Literal,

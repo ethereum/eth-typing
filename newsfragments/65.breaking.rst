@@ -1,0 +1,1 @@
+The `eth_typing.enums` module has been renamed to `eth_typing.forks`.
