@@ -3,6 +3,23 @@ Release Notes
 
 .. towncrier release notes start
 
+eth-typing v5.0.0-beta.1 (2024-06-17)
+-------------------------------------
+
+Breaking changes
+~~~~~~~~~~~~~~~~
+
+- Mark ABI types with optional attributes.
+
+  * ``ABIFunction`` requires ``type`` and ``name`` but ``inputs`` and ``outputs`` are optional.
+  * ``ABIEvent`` requires ``type`` and ``name`` but ``inputs`` and ``anonymous`` are optional.
+  * All attributes of ``ABIFunctionInfo`` are required.
+  * ``ABIFallback`` and ``ABIReceive`` now require the ``type`` attribute.
+  * ``ABIConstructor`` requires a ``type`` but ``inputs`` are optional.
+  * ``ABIError`` requires ``type`` and ``name`` but ``inputs`` is optional.
+  * ``ABIComponent`` requires ``type`` and ``name`` but ``components`` may be omitted so that ``inputs`` may use either ``primitive`` or ``tuple`` types. (`#76 <https://github.com/ethereum/eth-typing/issues/76>`__) (`#79 <https://github.com/ethereum/eth-typing/issues/79>`__)
+
+
 eth-typing v4.3.1 (2024-06-17)
 ------------------------------
 
