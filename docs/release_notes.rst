@@ -3,6 +3,15 @@ Release Notes
 
 .. towncrier release notes start
 
+eth-typing v4.3.1 (2024-06-17)
+------------------------------
+
+Bugfixes
+~~~~~~~~
+
+- Update ``typing_extensions`` to ``4.5.0`` which supposrts ``deprecated`` decorator. (`#80 <https://github.com/ethereum/eth-typing/issues/80>`__)
+
+
 eth-typing v4.3.0 (2024-06-10)
 ------------------------------
 
