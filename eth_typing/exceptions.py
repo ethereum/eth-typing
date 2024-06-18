@@ -1,3 +1,8 @@
+"""
+Exception types raised in web3's libraries.
+"""
+
+
 class ValidationError(Exception):
     """
     Raised when something does not pass a validation check.

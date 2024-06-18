@@ -1,3 +1,7 @@
+"""
+Types for Ethereum network identifiers.
+"""
+
 from enum import (
     IntEnum,
 )
@@ -10,16 +14,41 @@ URI = NewType("URI", str)
 
 
 class ChainId(IntEnum):
+    """
+    IntEnum class defining EVM-compatible network name enums as their respective
+    ``ChainID`` int values.
+
+    To learn more about chain ids, see `CAIP-2 <https://github.com/ChainAgnostic/CAIPs/blob/main/CAIPs/caip-2.md>`_ for details.
+
+    The list of chain ids is available from the `ethereum-lists/chains <https://github.com/ethereum-lists/chains>`_ repository.
+
+    For a complete list of supported enums, see `eth_typing/networks.py <https://github.com/ethereum/eth-typing/blob/f9cfaa35e2c1ac868ffe9256174aaac3b882c8d1/eth_typing/networks.py>`_.
+
+    .. doctest::
+
+        >>> from eth_typing import ChainId
+        >>> ChainId(1)
+        <ChainId.ETH: 1>
+        >>> ChainId(10)
+        <ChainId.OETH: 10>
+    """  # noqa: E501
+
     ETH = 1
+    """Ethereum Mainnet"""
     EXP = 2
+    """Expanse"""
     ROP = 3
+    """Ropsten"""
     RIN = 4
+    """Rinkeby"""
     GOR = 5
+    """Görli"""
     KOT = 6
     TCH = 7
     UBQ = 8
     TUBQ = 9
     OETH = 10
+    """OP Mainnet"""
     META = 11
     KAL = 12
     DSTG = 13
@@ -110,6 +139,7 @@ class ChainId(IntEnum):
     SIX = 98
     POA = 99
     GNO = 100
+    """Gnosis"""
     ETI = 101
     TW3G = 102
     WLC = 103
