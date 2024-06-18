@@ -3,6 +3,28 @@ Release Notes
 
 .. towncrier release notes start
 
+eth-typing v5.0.0-beta.2 (2024-06-18)
+-------------------------------------
+
+Improved Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+- Updates all modules and types with docstrings. Docs are now generated through ``autodoc``. (`#81 <https://github.com/ethereum/eth-typing/issues/81>`__)
+
+
+Features
+~~~~~~~~
+
+- Move `URI` type from EthPM module to networks. (`#65 <https://github.com/ethereum/eth-typing/issues/65>`__)
+
+
+Removals
+~~~~~~~~
+
+- Remove types related to the EthPM module which has been removed from ``web3.py`` (`#65 <https://github.com/ethereum/eth-typing/issues/65>`__)
+- Remove deprecated ABI types ``ABIEventComponent``, ``ABIEventParam``, ``ABIFunctionComponent``, ``ABIFunctionParam``. (`#82 <https://github.com/ethereum/eth-typing/issues/82>`__)
+
+
 eth-typing v5.0.0-beta.1 (2024-06-17)
 -------------------------------------
 

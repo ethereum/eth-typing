@@ -1,1 +1,0 @@
-Remove deprecated ABI types ``ABIEventComponent``, ``ABIEventParam``, ``ABIFunctionComponent``, ``ABIFunctionParam``.
