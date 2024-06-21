@@ -1,0 +1,1 @@
+``ABIEvent`` ``inputs`` have been extended to allow ``ABIComponentIndexed`` types.
