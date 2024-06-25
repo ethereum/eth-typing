@@ -142,6 +142,13 @@ class ABIError(TypedDict):
 
 
 ABICallable = Union[ABIFunction, ABIConstructor, ABIFallback, ABIReceive]
+"""
+A `Union` type consisting of `ABIFunction`, `ABIConstructor`, `ABIFallback` and
+`ABIReceive` types.
+"""
+
+ABIElement = Union[ABICallable, ABIEvent, ABIError]
+"""A `Union` type consisting of `ABICallable`, `ABIEvent`, and `ABIError` types."""
 
 
 class ABIElementInfo(TypedDict):
@@ -150,16 +157,14 @@ class ABIElementInfo(TypedDict):
     selector and arguments.
     """
 
-    abi: ABICallable
-    """ABI for the function interface."""
+    abi: ABIElement
+    """ABI for any `ABIElement` type."""
     selector: HexStr
-    """Solidity Function selector sighash."""
+    """Solidity `ABIElement` selector sighash."""
     arguments: Tuple[Any, ...]
-    """Function input components."""
+    """`ABIElement` input components."""
 
 
-ABIElement = Union[ABICallable, ABIEvent, ABIError]
-"""Base type for `ABIFunction` and `ABIEvent` types."""
 ABI = Sequence[ABIElement]
 """
 List of components representing function and event interfaces
