@@ -1,0 +1,1 @@
+Replace ``ABIFunctionInfo`` type with ``ABIElementInfo`` to encompass all ``ABIElement`` types. ``ABIElementInfo`` includes the function ``abi`` (``ABIElement``), ``selector`` (``HexStr``) and ``args`` (``Tuple``).
