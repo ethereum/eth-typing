@@ -144,9 +144,9 @@ class ABIError(TypedDict):
 ABICallable = Union[ABIFunction, ABIConstructor, ABIFallback, ABIReceive]
 
 
-class ABIFunctionInfo(TypedDict):
+class ABIElementInfo(TypedDict):
     """
-    TypedDict to represent properties of an `ABIFunction`, including the function
+    TypedDict to represent properties of an `ABIElement`, including the abi,
     selector and arguments.
     """
 
