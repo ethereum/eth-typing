@@ -3,6 +3,21 @@ Release Notes
 
 .. towncrier release notes start
 
+eth-typing v5.0.0-beta.3 (2024-06-27)
+-------------------------------------
+
+Features
+~~~~~~~~
+
+- Replace ``ABIFunctionInfo`` type with ``ABIElementInfo`` to encompass all ``ABIElement`` types. ``ABIElementInfo`` includes the function ``abi`` (``ABIElement``), ``selector`` (``HexStr``) and ``args`` (``Tuple``). (`#85 <https://github.com/ethereum/eth-typing/issues/85>`__)
+
+
+Internal Changes - for eth-typing Contributors
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- Cleanup references to ABI types that have been removed. (`#87 <https://github.com/ethereum/eth-typing/issues/87>`__)
+
+
 eth-typing v5.0.0-beta.2 (2024-06-18)
 -------------------------------------
 
