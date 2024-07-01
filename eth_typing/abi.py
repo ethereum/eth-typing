@@ -20,8 +20,6 @@ TypeStr = str
 Decodable = Union[bytes, bytearray]
 """Binary data to be decoded."""
 
-ABI_COMPONENT_DEPRECATION_MSG = f"`{0}` is deprecated, use {1} instead."
-
 
 def get_deprecation_message(abi_type: str, new_types: Sequence[str]) -> str:
     new_types_list = [f"`{new_type}`" for new_type in new_types]
