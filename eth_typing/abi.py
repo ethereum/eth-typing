@@ -20,12 +20,24 @@ TypeStr = str
 Decodable = Union[bytes, bytearray]
 """Binary data to be decoded."""
 
-ABI_COMPONENT_DEPRECATION_MSG = "`{0}` is deprecated, use `ABIComponent` instead."
+
+def get_deprecation_message(abi_type: str, new_types: Sequence[str]) -> str:
+    new_types_list = [f"`{new_type}`" for new_type in new_types]
+    return f"`{abi_type}` is deprecated, use {' or '.join(new_types_list)} instead."
 
 
-@deprecated(ABI_COMPONENT_DEPRECATION_MSG.format("ABIEventComponent"))
+@deprecated(
+    get_deprecation_message(
+        abi_type="ABIEventComponent", new_types=["ABIComponent", "ABIComponentIndexed"]
+    )
+)
 class ABIEventComponent(TypedDict, total=False):
     """
+    .. warning::
+
+        :class:`ABIEventComponent` is deprecated, use :class:`ABIComponent` or
+        :class:`ABIComponentIndexed` instead.
+
     TypedDict to represent the `ABI` for nested event parameters.
     Used as a component of `ABIEventParam`.
     """
@@ -38,9 +50,18 @@ class ABIEventComponent(TypedDict, total=False):
     """Type of the event parameter."""
 
 
-@deprecated(ABI_COMPONENT_DEPRECATION_MSG.format("ABIEventParam"))
+@deprecated(
+    get_deprecation_message(
+        abi_type="ABIEventParam", new_types=["ABIComponent", "ABIComponentIndexed"]
+    )
+)
 class ABIEventParam(TypedDict, total=False):
     """
+    .. warning::
+
+        :class:`ABIEventParam` is deprecated, use :class:`ABIComponent` or
+        :class:`ABIComponentIndexed` instead.
+
     TypedDict to represent the `ABI` for event parameters.
     """
 
@@ -91,9 +112,15 @@ class ABIEvent(TypedDict, total=False):
     """Input components for the event."""
 
 
-@deprecated(ABI_COMPONENT_DEPRECATION_MSG.format("ABIFunctionComponent"))
+@deprecated(
+    get_deprecation_message(abi_type="ABIFunctionComponent", new_types=["ABIComponent"])
+)
 class ABIFunctionComponent(TypedDict, total=False):
     """
+    .. warning::
+
+        :class:`ABIFunctionComponent` is deprecated, use :class:`ABIComponent` instead.
+
     TypedDict representing the `ABI` for nested function parameters.
     Used as a component of `ABIFunctionParam`.
     """
@@ -106,9 +133,15 @@ class ABIFunctionComponent(TypedDict, total=False):
     """Type of the function parameter."""
 
 
-@deprecated(ABI_COMPONENT_DEPRECATION_MSG.format("ABIFunctionParam"))
+@deprecated(
+    get_deprecation_message(abi_type="ABIFunctionParam", new_types=["ABIComponent"])
+)
 class ABIFunctionParam(TypedDict, total=False):
     """
+    .. warning::
+
+        :class:`ABIFunctionParam` is deprecated, use :class:`ABIComponent` instead.
+
     TypedDict representing the `ABI` for function parameters.
     """
 
@@ -209,9 +242,15 @@ ABIElement = Union[ABICallable, ABIEvent, ABIError]
 """A `Union` type consisting of `ABICallable`, `ABIEvent`, and `ABIError` types."""
 
 
-@deprecated("`ABIFunctionInfo` is deprecated, use `ABIElementInfo` instead.")
+@deprecated(
+    get_deprecation_message(abi_type="ABIFunctionInfo", new_types=["ABIElementInfo"])
+)
 class ABIFunctionInfo(TypedDict, total=False):
     """
+    .. warning::
+
+        :class:`ABIFunctionInfo` is deprecated, use :class:`ABIElementInfo` instead.
+
     TypedDict to represent properties of an `ABIFunction`, including the function
     selector and arguments.
     """
