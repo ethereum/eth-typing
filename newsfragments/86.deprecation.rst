@@ -1,1 +1,0 @@
-Deprecate ``ABIFunctionInfo`` to be removed in the next major release.

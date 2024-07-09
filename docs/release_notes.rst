@@ -3,6 +3,28 @@ Release Notes
 
 .. towncrier release notes start
 
+eth-typing v4.4.0 (2024-07-09)
+------------------------------
+
+Deprecations
+~~~~~~~~~~~~
+
+- Deprecate ``ABIFunctionInfo`` to be removed in the next major release. (`#86 <https://github.com/ethereum/eth-typing/issues/86>`__)
+
+
+Improved Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+- Update deprecated ABI function docstrings with deprecation warnings. (`#87 <https://github.com/ethereum/eth-typing/issues/87>`__)
+
+
+Features
+~~~~~~~~
+
+- TypedDict ``ABIElementInfo`` to encompass relevant information about ``ABIElement`` types. ``ABIElementInfo`` includes the function ``abi`` (``ABIElement``), ``selector`` (``HexStr``) and ``args`` (``Tuple``). (`#86 <https://github.com/ethereum/eth-typing/issues/86>`__)
+- Export ``ABIElementInfo`` from ``__init__.py``. (`#87 <https://github.com/ethereum/eth-typing/issues/87>`__)
+
+
 eth-typing v4.3.1 (2024-06-17)
 ------------------------------
 

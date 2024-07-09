@@ -1,1 +1,0 @@
-TypedDict ``ABIElementInfo`` to encompass relevant information about ``ABIElement`` types. ``ABIElementInfo`` includes the function ``abi`` (``ABIElement``), ``selector`` (``HexStr``) and ``args`` (``Tuple``).
