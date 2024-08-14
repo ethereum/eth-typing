@@ -3,6 +3,15 @@ Release Notes
 
 .. towncrier release notes start
 
+eth-typing v5.0.0 (2024-08-14)
+------------------------------
+
+Internal Changes - for eth-typing Contributors
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- Run ``mypy`` locally rather than in a ``pre-commit`` container (`#90 <https://github.com/ethereum/eth-typing/issues/90>`__)
+
+
 eth-typing v5.0.0-beta.3 (2024-06-27)
 -------------------------------------
 
