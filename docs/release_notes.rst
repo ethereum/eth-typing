@@ -3,6 +3,15 @@ Release Notes
 
 .. towncrier release notes start
 
+eth-typing v5.0.1 (2024-10-14)
+------------------------------
+
+Bugfixes
+~~~~~~~~
+
+- ``ABIEvent`` should use ``ABIComponentIndexed`` instead of ``ABIComponent`` as the type for ``inputs``. (`#92 <https://github.com/ethereum/eth-typing/issues/92>`__)
+
+
 eth-typing v5.0.0 (2024-08-14)
 ------------------------------
 

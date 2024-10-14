@@ -1,1 +1,0 @@
-``ABIEvent`` should use ``ABIComponentIndexed`` instead of ``ABIComponent`` as the type for ``inputs``.
