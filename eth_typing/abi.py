@@ -58,7 +58,7 @@ class ABIEvent(TypedDict):
     """Event ABI type."""
     anonymous: NotRequired[bool]
     """If True, event is anonymous. Cannot filter the event by name."""
-    inputs: NotRequired[Sequence["ABIComponent"]]
+    inputs: NotRequired[Sequence["ABIComponentIndexed"]]
     """Input components for the event."""
 
 
