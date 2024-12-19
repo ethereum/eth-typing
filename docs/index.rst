@@ -8,14 +8,14 @@ Installation
 
 .. code-block:: bash
 
-    python -m pip install <PROJECT_NAME>
+    python -m pip install eth-typing
 
 
 .. toctree::
     :maxdepth: 1
     :caption: General
 
-    Usage<<MODULE_NAME>>
+    Usage<eth_typing>
     release_notes
 
 .. toctree::

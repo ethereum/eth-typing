@@ -8,9 +8,9 @@
 
 Common type annotations for ethereum python packages.
 
-Read the [documentation](https://%3CRTD_NAME%3E.readthedocs.io/).
+Read the [documentation](https://eth-typing.readthedocs.io/).
 
-View the [change log](https://%3CRTD_NAME%3E.readthedocs.io/en/latest/release_notes.html).
+View the [change log](https://eth-typing.readthedocs.io/en/latest/release_notes.html).
 
 ## Installation
 
