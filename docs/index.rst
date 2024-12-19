@@ -3,17 +3,24 @@ eth-typing
 
 Common type annotations for ethereum python packages.
 
-Contents
---------
+Installation
+------------
+
+.. code-block:: bash
+
+    python -m pip install <PROJECT_NAME>
+
 
 .. toctree::
-    :maxdepth: 3
+    :maxdepth: 1
+    :caption: General
 
-    eth_typing
+    Usage<<MODULE_NAME>>
     release_notes
 
-Indices and tables
-------------------
+.. toctree::
+    :maxdepth: 1
+    :caption: Community
 
-* :ref:`genindex`
-* :ref:`modindex`
+    contributing
+    code_of_conduct
