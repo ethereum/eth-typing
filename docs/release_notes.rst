@@ -3,6 +3,15 @@ Release Notes
 
 .. towncrier release notes start
 
+eth-typing v5.1.0 (2025-01-08)
+------------------------------
+
+Features
+~~~~~~~~
+
+- Add py313 support, drop ``bumpmyversion`` in favor of ``bump-my-version`` (`#93 <https://github.com/ethereum/eth-typing/issues/93>`__)
+
+
 eth-typing v5.0.1 (2024-10-14)
 ------------------------------
 

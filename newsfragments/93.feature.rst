@@ -1,1 +1,0 @@
-Add py313 support, drop ``bumpmyversion`` in favor of ``bump-my-version``
