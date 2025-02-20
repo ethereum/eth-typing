@@ -30,3 +30,4 @@ class ForkName:
     Paris = "Paris"
     Shanghai = "Shanghai"
     Cancun = "Cancun"
+    Prague = "Prague"
