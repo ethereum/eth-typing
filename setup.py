@@ -39,7 +39,7 @@ with open("./README.md") as readme:
 setup(
     name="eth-typing",
     # *IMPORTANT*: Don't manually change the version here. See Contributing docs for the release process.
-    version="5.1.0",
+    version="5.2.0",
     description="""eth-typing: Common type annotations for ethereum python packages""",
     long_description=long_description,
     long_description_content_type="text/markdown",
