@@ -3,6 +3,15 @@ Release Notes
 
 .. towncrier release notes start
 
+eth-typing v5.2.0 (2025-02-20)
+------------------------------
+
+Features
+~~~~~~~~
+
+- Add Prague to ForkName enum (`#94 <https://github.com/ethereum/eth-typing/issues/94>`__)
+
+
 eth-typing v5.1.0 (2025-01-08)
 ------------------------------
 
