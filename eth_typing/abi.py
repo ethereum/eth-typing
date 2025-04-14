@@ -30,10 +30,10 @@ class ABIComponent(TypedDict):
     TypedDict representing an `ABIElement` component.
     """
 
-    name: str
-    """Name of the component."""
     type: str
     """Type of the component."""
+    name: NotRequired[str]
+    """Name of the component."""
     components: NotRequired[Sequence["ABIComponent"]]
     """List of nested `ABI` components for ABI types."""
 
