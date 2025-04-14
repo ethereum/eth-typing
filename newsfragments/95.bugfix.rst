@@ -1,0 +1,1 @@
+Set name as optional for ``ABIComponent`` type.
