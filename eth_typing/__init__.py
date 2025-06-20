@@ -86,4 +86,4 @@ __all__ = (
     "ChainId",
 )
 
-__version__ = __version("eth-typing")
+__version__ = "5.2.1"  # Change this in every new version.
