@@ -53,7 +53,7 @@ master_doc = "index"
 
 # General information about the project.
 project = "eth-typing"
-copyright = "2018-2023, The Ethereum Foundation"
+copyright = "2019-2025, The Ethereum Foundation"
 
 __version__ = setup_version
 # The version info for the project you're documenting, acts as replacement for
