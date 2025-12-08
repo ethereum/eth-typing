@@ -56,9 +56,7 @@ setup(
     py_modules=["eth_typing"],
     zip_safe=False,
     keywords="ethereum",
-    packages=find_packages(
-        exclude=["scripts", "scripts.*", "tests", "tests.*"]
-    ),
+    packages=find_packages(exclude=["scripts", "scripts.*", "tests", "tests.*"]),
     package_data={"eth_typing": ["py.typed"]},
     classifiers=[
         "Development Status :: 5 - Production/Stable",

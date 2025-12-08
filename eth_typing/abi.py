@@ -2,11 +2,12 @@
 Types for Contract ABIs and related components.
 """
 
+from collections.abc import (
+    Sequence,
+)
 from typing import (
     Any,
     Literal,
-    Sequence,
-    Tuple,
     TypedDict,
     Union,
 )
@@ -161,7 +162,7 @@ class ABIElementInfo(TypedDict):
     """ABI for any `ABIElement` type."""
     selector: HexStr
     """Solidity `ABIElement` selector sighash."""
-    arguments: Tuple[Any, ...]
+    arguments: tuple[Any, ...]
     """`ABIElement` input components."""
 
 
