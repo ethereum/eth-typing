@@ -3,6 +3,21 @@ Release Notes
 
 .. towncrier release notes start
 
+eth-typing v6.0.0-beta.1 (2025-12-15)
+-------------------------------------
+
+Breaking changes
+~~~~~~~~~~~~~~~~
+
+- Drop support for Python 3.8 and 3.9 (`#99 <https://github.com/ethereum/eth-typing/issues/99>`__)
+
+
+Features
+~~~~~~~~
+
+- Add support for Python 3.14 (`#99 <https://github.com/ethereum/eth-typing/issues/99>`__)
+
+
 eth-typing v5.2.1 (2025-04-14)
 ------------------------------
 
