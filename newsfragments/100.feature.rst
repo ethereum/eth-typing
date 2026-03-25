@@ -1,0 +1,1 @@
+Add Osaka, Bogota, and Amsterdam to ForkName enum
