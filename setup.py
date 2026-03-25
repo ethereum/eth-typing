@@ -40,7 +40,7 @@ setup(
     name="eth-typing",
     # *IMPORTANT*: Don't manually change the version here.
     # See Contributing docs for the release process.
-    version="6.0.0-beta.1",
+    version="6.0.0",
     description="""eth-typing: Common type annotations for ethereum python packages""",
     long_description=long_description,
     long_description_content_type="text/markdown",
