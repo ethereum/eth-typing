@@ -31,3 +31,6 @@ class ForkName:
     Shanghai = "Shanghai"
     Cancun = "Cancun"
     Prague = "Prague"
+    Osaka = "Osaka"
+    Amsterdam = "Amsterdam"
+    Bogota = "Bogota"
