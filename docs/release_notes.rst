@@ -3,6 +3,15 @@ Release Notes
 
 .. towncrier release notes start
 
+eth-typing v6.0.0 (2026-03-25)
+------------------------------
+
+Features
+~~~~~~~~
+
+- Add Osaka, Bogota, and Amsterdam to ForkName enum (`#100 <https://github.com/ethereum/eth-typing/issues/100>`__)
+
+
 eth-typing v6.0.0-beta.1 (2025-12-15)
 -------------------------------------
 
